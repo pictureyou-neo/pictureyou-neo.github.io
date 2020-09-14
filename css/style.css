@@ -464,7 +464,7 @@ code {
   font-size: 14px;
   line-height: 1.2em;
   opacity: 0.5;
-  font-family: FontAwesome;
+  font-family: 'Noto Sans KR', sans-serif;
   display: inline-block;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item.top-level-menu:hover > a {
@@ -1592,7 +1592,7 @@ color-border.archives-wrap {
 }
 #page-nav .pages:before {
   content: "\f15c";
-  font-family: FontAwesome;
+  font-family: 'Noto Sans KR', sans-serif;
   margin-right: 6px;
 }
 #page-nav .page-number,
