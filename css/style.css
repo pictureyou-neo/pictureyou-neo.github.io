@@ -2,7 +2,7 @@
 #main .main-body-header a,
 .article-meta,
 .archive-year {
-  text-transform: uppercase;
+  text-transform: none;
   line-height: 1em;
   color: #aaa;
 }
@@ -19,7 +19,7 @@
 .widget h1,
 .article-entry h1 {
   font-size: 2em;
-  color: #fff;
+  color: #009a22;
 }
 .widget h2,
 .article-entry h2 {
@@ -53,6 +53,7 @@
 .widget strong,
 .article-entry strong {
   font-weight: bold;
+  color: #009a22;
 }
 .widget em,
 .article-entry em,
@@ -234,7 +235,7 @@ body,
 }
 body {
   background: #383b3f;
-  font: 14px 'Noto Sans KR', sans-serif;
+  font: 14px 'Noto Sans KR', 'FontAwesome', sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 code {
@@ -298,7 +299,7 @@ code {
   box-sizing: border-box;
   -webkit-box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
   box-shadow: rgba(0,0,0,0.098) 0px 1px 1px 0px;
-  padding-right: 340px;
+  padding-right: 250px;
   background: url("images/s-left.png") repeat-y right 0;
 }
 .main-body-inner:before,
@@ -325,7 +326,7 @@ code {
   color: #aaa;
   font-size: 16px;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   line-height: 24px;
 }
 #main .main-body-header .page-title-link,
@@ -464,7 +465,7 @@ code {
   font-size: 14px;
   line-height: 1.2em;
   opacity: 0.5;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
   display: inline-block;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item.top-level-menu:hover > a {
@@ -537,7 +538,7 @@ code {
   -moz-transition: 0.2s ease-in;
   -ms-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  font: 16px 'Noto Sans KR', sans-serif;
+  font: 16px 'Noto Sans KR', 'FontAwesome', sans-serif;
   color: rgba(255,255,255,0.7);
 }
 .search-form-input:focus,
@@ -561,8 +562,8 @@ code {
 }
 #sidebar {
   float: right;
-  margin-right: -340px;
-  width: 340px;
+  margin-right: -250px;
+  width: 250px;
 }
 #sidebar .sidebar-toggle {
   display: none;
@@ -625,7 +626,7 @@ code {
   border-radius: 3px;
   -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2);
   box-shadow: 0 0 2px rgba(0,0,0,0.2);
-  text-transform: uppercase;
+  text-transform: none;
   z-index: 1;
 }
 #sidebar .sidebar-top .social-links .social-tooltip:hover:before {
@@ -696,7 +697,7 @@ code {
   letter-spacing: 0.5px;
   line-height: 24px;
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .article-nav-title {
   font-size: 15px;
@@ -782,7 +783,7 @@ code {
   content: "\f0da";
   font-size: 12px;
   margin-right: 6px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
@@ -860,7 +861,7 @@ code {
 #recent-post li .item-inner a,
 #recent-post li .item-inner .item-category {
   font-size: 13px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 #recent-post li .item-inner a a,
 #recent-post li .item-inner .item-category a {
@@ -889,7 +890,7 @@ code {
 #recent-post li .item-inner .item-date {
   color: #aaa;
   font-size: 13px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 #recent-post li:hover .item-thumbnail {
   opacity: 0.8;
@@ -1094,7 +1095,7 @@ a.article-title:hover {
   color: #009a22;
 }
 .article-meta .category {
-  text-transform: uppercase;
+  text-transform: none;
 }
 .article-meta .category a,
 .article-meta .category i {
@@ -1119,6 +1120,7 @@ a.article-title:hover {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6em;
+  padding-left: 10px;
 }
 .article-entry:before,
 .article-entry:after {
@@ -1197,28 +1199,29 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  color: #777;
+  color: #009a22;
   quote: none;
-  margin: 0 0 20px 0;
+  margin: 1.6em 20px;
   position: relative;
   font-style: italic;
-  padding-left: 50px;
+  padding-left: 20px;
+  border-left: 5px solid #009a22;
 }
 .article-entry blockquote:before {
   top: 0;
   left: 0;
   color: #ccc;
-  font-size: 32px;
-  content: "\f10d";
+  font-size: 20px;
+  padding-left: 20px;
   position: absolute;
   text-align: center;
   font-style: normal;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
 }
 .article-entry blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -1330,7 +1333,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px 'Noto Sans KR', sans-serif;
+  font: 14px 'Noto Sans KR', 'FontAwesome', sans-serif;
   padding: 0 15px;
   color: #fff;
   outline: none;
@@ -1369,7 +1372,7 @@ a.article-title:hover {
 .article-share-pinterest:before,
 .article-share-google:before {
   font-size: 20px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
 }
 .article-share-twitter:hover,
 .article-share-facebook:hover,
@@ -1449,7 +1452,7 @@ a.article-title:hover {
   line-height: 36px;
   margin-top: -18px;
   position: absolute;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
   color: rgba(255,255,255,0.5);
 }
 .article-gallery .gallery-item:hover:before,
@@ -1592,7 +1595,7 @@ color-border.archives-wrap {
 }
 #page-nav .pages:before {
   content: "\f15c";
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
   margin-right: 6px;
 }
 #page-nav .page-number,
@@ -1960,7 +1963,7 @@ i.icon:before {
     line-height: 38px;
     font-size: 38px;
     width: 38px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'FontAwesome', sans-serif;
   }
   .main-body-inner #sidebar .sidebar-toggle .toggle:before {
     content: '\f100';
@@ -1985,7 +1988,7 @@ i.icon:before {
     transition: opacity 0.2s ease-in;
   }
   .main-body-inner #sidebar.expend {
-    width: 340px;
+    width: 250px;
     overflow-y: auto;
     z-index: 2;
     -webkit-transition: width 0.2s ease-in;
