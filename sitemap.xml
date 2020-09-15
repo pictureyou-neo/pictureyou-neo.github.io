@@ -3,17 +3,17 @@
 
 
     <sitemap>
-        <loc>http://example.com/post-sitemap.xml</loc>
+        <loc>http://pictureyou-neo.github.io/post-sitemap.xml</loc>
         <lastmod>2020-09-15T06:19:41.358Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://example.com/category-sitemap.xml</loc>
+        <loc>http://pictureyou-neo.github.io/category-sitemap.xml</loc>
         <lastmod>2020-09-15T06:19:41.358Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://example.com/tag-sitemap.xml</loc>
+        <loc>http://pictureyou-neo.github.io/tag-sitemap.xml</loc>
         <lastmod>2020-09-15T06:19:41.358Z</lastmod>
     </sitemap>
 
