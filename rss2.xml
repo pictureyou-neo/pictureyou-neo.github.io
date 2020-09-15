@@ -33,10 +33,6 @@
       <category domain="http://pictureyou-neo.github.io/categories/3-General/Tool/">Tool</category>
       
       
-      <category domain="http://pictureyou-neo.github.io/tags/markdown/">markdown</category>
-      
-      <category domain="http://pictureyou-neo.github.io/tags/md/">.md</category>
-      
       <category domain="http://pictureyou-neo.github.io/tags/microsoft/">microsoft</category>
       
       <category domain="http://pictureyou-neo.github.io/tags/MS/">MS</category>
@@ -50,6 +46,10 @@
       <category domain="http://pictureyou-neo.github.io/tags/%EC%B6%94%EC%B2%9C/">추천</category>
       
       <category domain="http://pictureyou-neo.github.io/tags/%EC%BD%94%EB%93%9C/">코드</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/markdown/">markdown</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/md/">.md</category>
       
       <category domain="http://pictureyou-neo.github.io/tags/extension/">extension</category>
       

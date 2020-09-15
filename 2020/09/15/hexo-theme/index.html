@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Hexo 테마 적용 | FTWR | Follow the white rabbit</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="hexo,PPOffice,Github,Git,theme,hueman,헥소,install">
+    
+    <meta name="description" content="#설치는 했는데Hexo 를 설치하고 나면 default theme 인 landscape 테마가 적용되어 있다.  이 나름대로도 깔끔하지만, 다른 테마 혹은 테마 수정하고 싶은 욕구가 솟구쳐 오를 것이다. 　 　#어떤 테마를 적용해 볼까?https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F; Hexo 공식 홈페이지에서 제공하는 테마의 종류를 볼 수 있다.종류는 매우 많은">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 테마 적용">
+<meta property="og:url" content="http://pictureyou-neo.github.io/2020/09/15/hexo-theme/index.html">
+<meta property="og:site_name" content="FTWR | Follow the white rabbit">
+<meta property="og:description" content="#설치는 했는데Hexo 를 설치하고 나면 default theme 인 landscape 테마가 적용되어 있다.  이 나름대로도 깔끔하지만, 다른 테마 혹은 테마 수정하고 싶은 욕구가 솟구쳐 오를 것이다. 　 　#어떤 테마를 적용해 볼까?https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F; Hexo 공식 홈페이지에서 제공하는 테마의 종류를 볼 수 있다.종류는 매우 많은">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pictureyou-neo.github.io/2020/09/15/hexo-theme/landscape.PNG">
+<meta property="article:published_time" content="2020-09-15T06:10:05.000Z">
+<meta property="article:modified_time" content="2020-09-15T14:19:24.772Z">
+<meta property="article:author" content="pictureyou">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="PPOffice">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="theme">
+<meta property="article:tag" content="hueman">
+<meta property="article:tag" content="헥소">
+<meta property="article:tag" content="install">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pictureyou-neo.github.io/2020/09/15/hexo-theme/landscape.PNG">
+    
+    <link rel="canonical" href="http://pictureyou-neo.github.io/2020/09/15/hexo-theme/">
+
+    
+
+    
+        <link rel="icon" href="/css/images/fav_nauseatedface.png">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href>
+    
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-178018518-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+    
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FTWR | Follow the white rabbit"> 
+    <meta property="og:description" content="develop log by neo"> 
+    <meta property="og:url" content="http://pictureyou-neo.github.io">
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/rss2.xml" title="FTWR | Follow the white rabbit" type="application/rss+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/">3_General</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/Tool/">Tool</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/2-Web/Hexo/">Hexo</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-hexo-theme" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 테마 적용
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2020/09/15/hexo-theme/" class="article-date">
+       <time datetime="2020-09-15T06:10:05.000Z" itemprop="datePublished">2020/09/15</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2020/09/15/hexo-theme/" class="article-date">
+     <time datetime="2020-09-15T14:19:24.772Z" itemprop="dateModified">2020/09/15</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-link-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-link-link" href="/tags/PPOffice/" rel="tag">PPOffice</a>, <a class="tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link-link" href="/tags/hueman/" rel="tag">hueman</a>, <a class="tag-link-link" href="/tags/install/" rel="tag">install</a>, <a class="tag-link-link" href="/tags/theme/" rel="tag">theme</a>, <a class="tag-link-link" href="/tags/%ED%97%A5%EC%86%8C/" rel="tag">헥소</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <h1 id="설치는-했는데"><a href="#설치는-했는데" class="headerlink" title="#설치는 했는데"></a>#설치는 했는데</h1><p>Hexo 를 설치하고 나면 default theme 인 landscape 테마가 적용되어 있다.</p>
+<p><img src="landscape.PNG" alt="나름 나쁘지 않다"></p>
+<p>이 나름대로도 깔끔하지만, 다른 테마 혹은 테마 수정하고 싶은 욕구가 솟구쳐 오를 것이다.</p>
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-1"><a href="#-1" class="headerlink" title="　"></a>　</h6><h1 id="어떤-테마를-적용해-볼까"><a href="#어떤-테마를-적용해-볼까" class="headerlink" title="#어떤 테마를 적용해 볼까?"></a>#어떤 테마를 적용해 볼까?</h1><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p>Hexo 공식 홈페이지에서 제공하는 테마의 종류를 볼 수 있다.<br>종류는 매우 많은데… <del>중국어 의 압박이 매우 심하다</del></p>
+<p>이 중에, 마음에 드는걸 골라도 된다.<br>하지만 나는 눈여겨 봤던 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://feel5ny.github.io/">필오</a> 님의 블로그 에서 <strong>“Theme by PPOffice”</strong> 를 점찍어 놨기 때문에, 바로 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice">PPOffice</a> github 페이지를 찾아나섰다. </p>
+<p><img src="ppoffice.PNG"></p>
+<p>Repository 를 보니 다른 테마도 많다. 안에 들어가 보면 sample design 을 볼 수 있다. 그 중에서도 테마 <strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman">hueman</a></strong> 이 바로 내가 찾던 테마 였다.</p>
+<p><img src="hueman.PNG"></p>
+<h6 id="-2"><a href="#-2" class="headerlink" title="　"></a>　</h6><h3 id="1-Theme-다운로드"><a href="#1-Theme-다운로드" class="headerlink" title="1. Theme 다운로드"></a>1. Theme 다운로드</h3><p>정말 좋은 세상이다. git bash 에서 아래 명령으로 git을 활용하여 theme 를 다운받을 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-hueman.git</span><br></pre></td></tr></table></figure>
+<p>git clone 을 수행하는 경로는 <strong>설치한 hexo 내부의 theme 폴더</strong> 에서 받아도 되고, 아니면 아무데나 받아서 <strong>복붙</strong>하면 된다.</p>
+<h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><h3 id="2-적용-확인"><a href="#2-적용-확인" class="headerlink" title="2. 적용 확인"></a>2. 적용 확인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>다시한번 hexo server 를 수행하면 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:4000/">로컬서버</a>에서 Hueman 테마가 적용된 것을 볼 수 있다.</p>
+<p><img src="hueman_2.PNG"></p>
+<h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><h1 id="원래-꾸미는데-시간이-제일-오래걸림"><a href="#원래-꾸미는데-시간이-제일-오래걸림" class="headerlink" title="#원래 꾸미는데 시간이 제일 오래걸림"></a>#원래 꾸미는데 시간이 제일 오래걸림</h1><p>게임을 할 때도 캐릭터 외형이나 룩질을 하느라 시간 다간다. 아마 초반에는 이러한 과정을 거쳐야 직성이 풀리는듯 하다.<br>다음에는 Hexo hueman기본테마에서 내가 수정했던 포인트 들을 적어보려고 한다.</p>
+<h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman">https://github.com/ppoffice/hexo-theme-hueman</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spurin.com/2020/01/04/Creating-a-Blog-Website-with-Docker-Hexo-Github-Free-Hosting-and-HTTPS/">https://spurin.com/2020/01/04/Creating-a-Blog-Website-with-Docker-Hexo-Github-Free-Hosting-and-HTTPS/</a><h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><img src="/images/rabbit-100.png"><h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://pictureyou-neo.github.io/2020/09/15/hexo-theme/" data-id="ckf426l890001rgvxbynv0c8o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "pictureyou"
+        },
+        "headline": "Hexo 테마 적용",
+        "image": "http://pictureyou-neo.github.iolandscape.PNG",
+        "keywords": "hexo PPOffice Github Git theme hueman 헥소 install",
+        "genre": "2_Web Hexo",
+        "datePublished": "2020-09-15",
+        "dateCreated": "2020-09-15",
+        "dateModified": "2020-09-15",
+        "url": "http://pictureyou-neo.github.io/2020/09/15/hexo-theme/",
+        "description": "#설치는 했는데Hexo 를 설치하고 나면 default theme 인 landscape 테마가 적용되어 있다.
+
+이 나름대로도 깔끔하지만, 다른 테마 혹은 테마 수정하고 싶은 욕구가 솟구쳐 오를 것이다.
+　
+　#어떤 테마를 적용해 볼까?https://hexo.io/themes/
+Hexo 공식 홈페이지에서 제공하는 테마의 종류를 볼 수 있다.종류는 매우 많은",
+        "wordCount": 279
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/pictureyou-neo" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/09/15/vsc-visual-studio-code/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            VSC, 비쥬얼 스튜디오 코드
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/09/15/hexo-install/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 설치</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-General/">3_General</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-General/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/15/vsc-visual-studio-code/" class="title">VSC, 비쥬얼 스튜디오 코드</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T13:00:50.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/15/hexo-theme/" class="title">Hexo 테마 적용</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T06:10:05.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/15/hexo-install/" class="title">Hexo 설치</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T05:13:04.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/1-Retro/">1_Retro</a></p>
+                            <p class="item-title"><a href="/2020/09/15/prologue/" class="title">내가 블로그를 해야하는 이유</a></p>
+                            <p class="item-date"><time datetime="2020-09-14T15:46:08.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/md/" style="font-size: 20px;">.md</a> <a href="/tags/FTWR/" style="font-size: 10px;">FTWR</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/MS/" style="font-size: 10px;">MS</a> <a href="/tags/PPOffice/" style="font-size: 20px;">PPOffice</a> <a href="/tags/VSC/" style="font-size: 10px;">VSC</a> <a href="/tags/extension/" style="font-size: 10px;">extension</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hueman/" style="font-size: 20px;">hueman</a> <a href="/tags/install/" style="font-size: 20px;">install</a> <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/neo/" style="font-size: 10px;">neo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/textedif/" style="font-size: 10px;">textedif</a> <a href="/tags/theme/" style="font-size: 20px;">theme</a> <a href="/tags/visualstudiocode/" style="font-size: 10px;">visualstudiocode</a> <a href="/tags/%EC%B6%94%EC%B2%9C/" style="font-size: 10px;">추천</a> <a href="/tags/%EC%BD%94%EB%93%9C/" style="font-size: 10px;">코드</a> <a href="/tags/%ED%97%A5%EC%86%8C/" style="font-size: 20px;">헥소</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 pictureyou</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'https-pictureyou-neo-github-io';
+    
+    
+    var disqus_url = 'http://pictureyou-neo.github.io/2020/09/15/hexo-theme/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
