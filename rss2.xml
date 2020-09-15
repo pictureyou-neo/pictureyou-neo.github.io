@@ -3,12 +3,12 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>FTWR</title>
+    <title>FTWR | Follow the white rabbit</title>
     <link>http://pictureyou-neo.github.io/</link>
     
     <atom:link href="http://pictureyou-neo.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>개발로그</description>
+    <description>develop log by neo</description>
     <pubDate>Tue, 15 Sep 2020 06:19:41 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
