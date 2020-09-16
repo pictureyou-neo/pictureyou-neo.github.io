@@ -381,6 +381,7 @@ code {
   margin-left: 20px;
 }
 #header-title .subtitle {
+  float: left;
   font-size: 16px;
   font-style: italic;
   line-height: 70px;
@@ -973,26 +974,6 @@ code {
   position: relative;
   margin-bottom: 1em;
   padding-bottom: 47.11%;
-}
-.article-summary .article-summary-inner .thumbnail .comment-counter {
-  right: 0;
-  top: 15px;
-  color: #fff;
-  font-size: 12px;
-  padding: 2px 7px;
-  line-height: 19px;
-  position: absolute;
-  display: inline-block;
-  background-color: #82b965;
-}
-.article-summary .article-summary-inner .thumbnail .comment-counter:before {
-  top: 3px;
-  left: -16px;
-  content: '';
-  position: absolute;
-  display: inline-block;
-  border: 9px solid transparent;
-  border-right-color: #82b965;
 }
 .article-summary .article-summary-inner .thumbnail .thumbnail-image {
   display: block;

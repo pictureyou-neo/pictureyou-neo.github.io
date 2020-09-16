@@ -8,16 +8,8 @@
     </url>
 
     <url>
-        <loc>http://pictureyou-neo.github.io/2020/09/15/vsc-visual-studio-code/</loc>
-        <lastmod>2020-09-15T14:19:26.661Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://pictureyou-neo.github.io/2020/09/15/prologue/</loc>
-        <lastmod>2020-09-15T14:19:25.387Z</lastmod>
+        <lastmod>2020-09-16T13:49:55.928Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +17,7 @@
 
     <url>
         <loc>http://pictureyou-neo.github.io/2020/09/15/hexo-theme/</loc>
-        <lastmod>2020-09-15T14:19:24.772Z</lastmod>
+        <lastmod>2020-09-16T13:48:25.693Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -33,7 +25,15 @@
 
     <url>
         <loc>http://pictureyou-neo.github.io/2020/09/15/hexo-install/</loc>
-        <lastmod>2020-09-15T14:19:23.630Z</lastmod>
+        <lastmod>2020-09-16T13:48:22.434Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://pictureyou-neo.github.io/2020/09/15/vsc-visual-studio-code/</loc>
+        <lastmod>2020-09-16T13:47:38.872Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
