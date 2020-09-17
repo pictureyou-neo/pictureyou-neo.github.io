@@ -9,11 +9,61 @@
     <atom:link href="http://pictureyou-neo.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>develop log by neo</description>
-    <pubDate>Wed, 16 Sep 2020 13:47:38 GMT</pubDate>
+    <pubDate>Thu, 17 Sep 2020 03:48:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>VSC, 비쥬얼 스튜디오 코드</title>
+      <title>Python basic / 파이썬 문자열, 주석, 연산자</title>
+      <link>http://pictureyou-neo.github.io/2020/09/16/python-basic-character/</link>
+      <guid>http://pictureyou-neo.github.io/2020/09/16/python-basic-character/</guid>
+      <pubDate>Wed, 16 Sep 2020 14:12:29 GMT</pubDate>
+      
+        
+        
+      <description>&lt;!--============================================================--&gt;
+&lt;!--                         [서론]                             --&gt;
+&lt;!--==</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<!--============================================================--><!--                         [서론]                             --><!--============================================================--><h1 id="파이썬-기초"><a href="#파이썬-기초" class="headerlink" title="#파이썬 기초"></a>#파이썬 기초</h1><p>앞으로 Python 기본내용에 대해 정리해 보려고 한다.<br>가끔 문법이 혼동될때가 있는데, 정리된 내용을 보고 되새겨 보자.</p><blockquote><p>유튜버 <strong><em><a href="https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw">나도코딩</a></em></strong> 님의 무료강의를 들으면서 정리한 내용이다.<br>기초강의 6시간짜리가 무려 “무료” 다.<br><del>나는 3시간 더 들어야 한다</del></p></blockquote><h6 id=""><a href="#" class="headerlink" title="　"></a>　</h6><!--========================[구분선]============================--><h6 id="-1"><a href="#-1" class="headerlink" title=""></a></h6><hr><h6 id="-2"><a href="#-2" class="headerlink" title=""></a></h6><!--============================================================--><!--                         [본론]                             --><!--============================================================--><!--[주제]--><h2 id="문자열"><a href="#문자열" class="headerlink" title="#문자열"></a><strong>#문자열</strong></h2><!--[소주제]--><p><em>print 를 사용하면 콘솔창에 출력이 가능하다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변수 선언 후 출력</span></span><br><span class="line">var_en = <span class="string">&quot;abc&quot;</span></span><br><span class="line">var_kr = <span class="string">&quot;테스트&quot;</span></span><br><span class="line">var_num = <span class="number">5678</span></span><br><span class="line">var_bol = <span class="literal">False</span></span><br><span class="line">print(var_en)</span><br><span class="line">print(var_kr)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abc</span><br><span class="line">테스트</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--[소주제]--><p><em>문자열의 경우 곱연산도 가능하다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 직접 입력도 가능</span></span><br><span class="line">print(<span class="string">&quot;Test&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;테스트&quot;</span>*<span class="number">2</span>)</span><br><span class="line">print(<span class="number">1234</span>)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test</span><br><span class="line">테스트테스트</span><br><span class="line">1234</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--[소주제]--><p><em>변수 입력은 “+” 연산자로 함께 출력이 가능하다.</em><br><em>숫자나 참거짓 경우 형변환을 사용해야 한다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 문자열 변수 입력인 경우 &quot;+&quot; 사용가능</span></span><br><span class="line">print(var_en + var_kr)</span><br><span class="line"><span class="comment"># 숫자 나 참거짓 변수 입력인 경우 형변환 사용해야함</span></span><br><span class="line">print(str(var_num) + var_kr)</span><br><span class="line">print(str(var_bol) + var_kr)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abc테스트</span><br><span class="line">5678테스트</span><br><span class="line">False테스트</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--[소주제]--><p><em>콤마 사용도 가능하다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &quot;+&quot; 대신 &quot;,&quot; 사용 가능하나, 공백이 강제로 들어감</span></span><br><span class="line">print(var_num , var_kr)</span><br><span class="line">print(var_bol , var_kr)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5678 테스트</span><br><span class="line">False 테스트</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--========================[구분선]============================--><h6 id="-11"><a href="#-11" class="headerlink" title=""></a></h6><hr><h6 id="-12"><a href="#-12" class="headerlink" title=""></a></h6><!--============================================================--><!--[주제]--><h2 id="주석처리"><a href="#주석처리" class="headerlink" title="#주석처리"></a><strong>#주석처리</strong></h2><!--[소주제]--><p><em>코드의 특정 줄이나, 범위를 주석처리 한다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">This is first comment test for my python study.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment">#print(&quot;Comment test&quot;)</span></span><br><span class="line">print(<span class="string">&quot;코멘트 테스트&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;따옴표 세개는 범위주석이고, # 은 한줄 주석이다.&quot;</span>)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">코멘트 테스트</span><br><span class="line">따옴표 세개는 범위주석이고, # 은 한줄 주석이다.</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-13"><a href="#-13" class="headerlink" title="　"></a>　</h6><h6 id="-14"><a href="#-14" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--========================[구분선]============================--><h6 id="-15"><a href="#-15" class="headerlink" title=""></a></h6><hr><h6 id="-16"><a href="#-16" class="headerlink" title=""></a></h6><!--============================================================--><!--[주제]--><h2 id="연산자"><a href="#연산자" class="headerlink" title="#연산자"></a><strong>#연산자</strong></h2><!--[소주제]--><p><em>사칙연산은 생략, 논리연산 중 not 의 사용법 이다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 True</span></span><br><span class="line">print(<span class="number">1</span> != <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 1과 5가 같지 않다는 &quot;참&quot; 이 다시한번 부정 되므로 False</span></span><br><span class="line">print(<span class="keyword">not</span>(<span class="number">1</span> != <span class="number">5</span>))</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--[소주제]--><p><em>논리연산 중 AND(&amp;) 와 OR(|) 의 사용법 이다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># AND 는 두가지 모두 True 여야 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">and</span> (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) &amp; (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line"><span class="comment"># OR 는 두가지 중 하나만 True 여도 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">or</span> (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) | (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-19"><a href="#-19" class="headerlink" title="　"></a>　</h6><h6 id="-20"><a href="#-20" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--[소주제]--><p><em>몫과 나머지를 구하는 방법 이다.</em></p><!--[코드]--><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 몫 과 나머지도 구할 수 있다.</span></span><br><span class="line">print(<span class="number">20</span> // <span class="number">6</span>)</span><br><span class="line">print(<span class="number">20</span> % <span class="number">3</span>)</span><br></pre></td></tr></table></figure><!--[결과]--><p><strong>결과</strong></p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure><!--[소주제구분]==================================--><h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================--><!--========================[구분선]============================--><h6 id="-23"><a href="#-23" class="headerlink" title=""></a></h6><hr><h6 id="-24"><a href="#-24" class="headerlink" title=""></a></h6><!--============================================================--><!--                         [결론]                             --><!--============================================================--><h1 id="C-랑-비슷한데"><a href="#C-랑-비슷한데" class="headerlink" title="#C 랑 비슷한데?"></a>#C 랑 비슷한데?</h1><p>여기까지는 C 랑 비슷한데, 실제로는 논리연산자를 기호 대신 not, and, or 로 사용하면 가독성이 좋아지는것 같다.</p><!--========================[구분선]============================--><h6 id="-25"><a href="#-25" class="headerlink" title=""></a></h6><hr><h6 id="-26"><a href="#-26" class="headerlink" title=""></a></h6><!--============================================================--><!--                         [참조]                             --><!--============================================================--><h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul><li><a href="https://www.youtube.com/watch?v=kWiCuklohdY&t=11379s">나도코딩 님의 파이썬 코딩 무료강의</a></li><li><a href="google.com">킹황갓 구글</a></li></ul><!--============================================================--><!--                         [로고]                             --><!--============================================================--><h6 id="-27"><a href="#-27" class="headerlink" title="　"></a>　</h6><h6 id="-28"><a href="#-28" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p><h6 id="-29"><a href="#-29" class="headerlink" title="　"></a>　</h6>]]></content:encoded>
+      
+      
+      <category domain="http://pictureyou-neo.github.io/categories/4-Study/">4_Study</category>
+      
+      <category domain="http://pictureyou-neo.github.io/categories/4-Study/Python/">Python</category>
+      
+      
+      <category domain="http://pictureyou-neo.github.io/tags/python/">python</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/comment/">comment</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/character/">character</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/calculate/">calculate</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/">파이썬</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/%EC%A3%BC%EC%84%9D/">주석</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/">문자열</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/%EC%97%B0%EC%82%B0%EC%9E%90/">연산자</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/%EA%B8%B0%EC%B4%88/">기초</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/basic/">basic</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/py/">py</category>
+      
+      
+      <comments>http://pictureyou-neo.github.io/2020/09/16/python-basic-character/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>VSC / 비쥬얼 스튜디오 코드</title>
       <link>http://pictureyou-neo.github.io/2020/09/15/vsc-visual-studio-code/</link>
       <guid>http://pictureyou-neo.github.io/2020/09/15/vsc-visual-studio-code/</guid>
       <pubDate>Tue, 15 Sep 2020 13:00:50 GMT</pubDate>
@@ -33,10 +83,6 @@
       <category domain="http://pictureyou-neo.github.io/categories/3-General/Tool/">Tool</category>
       
       
-      <category domain="http://pictureyou-neo.github.io/tags/markdown/">markdown</category>
-      
-      <category domain="http://pictureyou-neo.github.io/tags/md/">.md</category>
-      
       <category domain="http://pictureyou-neo.github.io/tags/microsoft/">microsoft</category>
       
       <category domain="http://pictureyou-neo.github.io/tags/MS/">MS</category>
@@ -51,6 +97,10 @@
       
       <category domain="http://pictureyou-neo.github.io/tags/%EC%BD%94%EB%93%9C/">코드</category>
       
+      <category domain="http://pictureyou-neo.github.io/tags/markdown/">markdown</category>
+      
+      <category domain="http://pictureyou-neo.github.io/tags/md/">.md</category>
+      
       <category domain="http://pictureyou-neo.github.io/tags/extension/">extension</category>
       
       <category domain="http://pictureyou-neo.github.io/tags/python/">python</category>
@@ -61,7 +111,7 @@
     </item>
     
     <item>
-      <title>Hexo 테마 적용</title>
+      <title>Hexo / 테마 적용</title>
       <link>http://pictureyou-neo.github.io/2020/09/15/hexo-theme/</link>
       <guid>http://pictureyou-neo.github.io/2020/09/15/hexo-theme/</guid>
       <pubDate>Tue, 15 Sep 2020 06:10:05 GMT</pubDate>
@@ -103,7 +153,7 @@
     </item>
     
     <item>
-      <title>Hexo 설치</title>
+      <title>Hexo / 설치</title>
       <link>http://pictureyou-neo.github.io/2020/09/15/hexo-install/</link>
       <guid>http://pictureyou-neo.github.io/2020/09/15/hexo-install/</guid>
       <pubDate>Tue, 15 Sep 2020 05:13:04 GMT</pubDate>

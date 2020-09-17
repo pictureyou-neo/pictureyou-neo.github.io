@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Python basic / 파이썬 문자열, 주석, 연산자 | FTWR | Follow the white rabbit</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="python,comment,character,calculate,파이썬,주석,문자열,연산자,기초,basic,py">
+    
+    <meta name="description" content="#파이썬 기초앞으로 Python 기본내용에 대해 정리해 보려고 한다.가끔 문법이 혼동될때가 있는데, 정리된 내용을 보고 되새겨 보자.  유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다.기초강의 6시간짜리가 무려 “무료” 다.나는 3시간 더 들어야 한다  　       #문자열 print 를 사용하면 콘솔창에 출력이 가능하다.  1234567#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python basic &#x2F; 파이썬 문자열, 주석, 연산자">
+<meta property="og:url" content="http://pictureyou-neo.github.io/2020/09/16/python-basic-character/index.html">
+<meta property="og:site_name" content="FTWR | Follow the white rabbit">
+<meta property="og:description" content="#파이썬 기초앞으로 Python 기본내용에 대해 정리해 보려고 한다.가끔 문법이 혼동될때가 있는데, 정리된 내용을 보고 되새겨 보자.  유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다.기초강의 6시간짜리가 무려 “무료” 다.나는 3시간 더 들어야 한다  　       #문자열 print 를 사용하면 콘솔창에 출력이 가능하다.  1234567#">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pictureyou-neo.github.io/images/rabbit-100.png">
+<meta property="article:published_time" content="2020-09-16T14:12:29.000Z">
+<meta property="article:modified_time" content="2020-09-17T03:48:55.514Z">
+<meta property="article:author" content="pictureyou">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="comment">
+<meta property="article:tag" content="character">
+<meta property="article:tag" content="calculate">
+<meta property="article:tag" content="파이썬">
+<meta property="article:tag" content="주석">
+<meta property="article:tag" content="문자열">
+<meta property="article:tag" content="연산자">
+<meta property="article:tag" content="기초">
+<meta property="article:tag" content="basic">
+<meta property="article:tag" content="py">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pictureyou-neo.github.io/images/rabbit-100.png">
+    
+    <link rel="canonical" href="http://pictureyou-neo.github.io/2020/09/16/python-basic-character/">
+
+    
+
+    
+        <link rel="icon" href="/css/images/fav_nauseatedface.png">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href>
+    
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-178018518-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+    
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FTWR | Follow the white rabbit"> 
+    <meta property="og:description" content="develop log by neo"> 
+    <meta property="og:url" content="http://pictureyou-neo.github.io">
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/rss2.xml" title="FTWR | Follow the white rabbit" type="application/rss+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/">3_General</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/4-Study/Python/">Python</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-python-basic-character" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Python basic / 파이썬 문자열, 주석, 연산자
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2020/09/16/python-basic-character/" class="article-date">
+       <time datetime="2020-09-16T14:12:29.000Z" itemprop="datePublished">2020/09/16</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2020/09/16/python-basic-character/" class="article-date">
+     <time datetime="2020-09-17T03:48:55.514Z" itemprop="dateModified">2020/09/17</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/basic/" rel="tag">basic</a>, <a class="tag-link-link" href="/tags/calculate/" rel="tag">calculate</a>, <a class="tag-link-link" href="/tags/character/" rel="tag">character</a>, <a class="tag-link-link" href="/tags/comment/" rel="tag">comment</a>, <a class="tag-link-link" href="/tags/py/" rel="tag">py</a>, <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-link-link" href="/tags/%EA%B8%B0%EC%B4%88/" rel="tag">기초</a>, <a class="tag-link-link" href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/" rel="tag">문자열</a>, <a class="tag-link-link" href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" rel="tag">연산자</a>, <a class="tag-link-link" href="/tags/%EC%A3%BC%EC%84%9D/" rel="tag">주석</a>, <a class="tag-link-link" href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" rel="tag">파이썬</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <!--============================================================-->
+<!--                         [서론]                             -->
+<!--============================================================-->
+<h1 id="파이썬-기초"><a href="#파이썬-기초" class="headerlink" title="#파이썬 기초"></a>#파이썬 기초</h1><p>앞으로 Python 기본내용에 대해 정리해 보려고 한다.<br>가끔 문법이 혼동될때가 있는데, 정리된 내용을 보고 되새겨 보자.</p>
+<blockquote>
+<p>유튜버 <strong><em><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw">나도코딩</a></em></strong> 님의 무료강의를 들으면서 정리한 내용이다.<br>기초강의 6시간짜리가 무려 “무료” 다.<br><del>나는 3시간 더 들어야 한다</del></p>
+</blockquote>
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><!--========================[구분선]============================-->
+<h6 id="-1"><a href="#-1" class="headerlink" title></a></h6><hr>
+<h6 id="-2"><a href="#-2" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [본론]                             -->
+<!--============================================================-->
+
+<!--[주제]-->
+<h2 id="문자열"><a href="#문자열" class="headerlink" title="#문자열"></a><strong>#문자열</strong></h2><!--[소주제]-->
+<p><em>print 를 사용하면 콘솔창에 출력이 가능하다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 변수 선언 후 출력</span></span><br><span class="line">var_en = <span class="string">&quot;abc&quot;</span></span><br><span class="line">var_kr = <span class="string">&quot;테스트&quot;</span></span><br><span class="line">var_num = <span class="number">5678</span></span><br><span class="line">var_bol = <span class="literal">False</span></span><br><span class="line">print(var_en)</span><br><span class="line">print(var_kr)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abc</span><br><span class="line">테스트</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>문자열의 경우 곱연산도 가능하다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 직접 입력도 가능</span></span><br><span class="line">print(<span class="string">&quot;Test&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;테스트&quot;</span>*<span class="number">2</span>)</span><br><span class="line">print(<span class="number">1234</span>)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test</span><br><span class="line">테스트테스트</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>변수 입력은 “+” 연산자로 함께 출력이 가능하다.</em><br><em>숫자나 참거짓 경우 형변환을 사용해야 한다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 문자열 변수 입력인 경우 &quot;+&quot; 사용가능</span></span><br><span class="line">print(var_en + var_kr)</span><br><span class="line"><span class="comment"># 숫자 나 참거짓 변수 입력인 경우 형변환 사용해야함</span></span><br><span class="line">print(str(var_num) + var_kr)</span><br><span class="line">print(str(var_bol) + var_kr)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abc테스트</span><br><span class="line">5678테스트</span><br><span class="line">False테스트</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>콤마 사용도 가능하다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &quot;+&quot; 대신 &quot;,&quot; 사용 가능하나, 공백이 강제로 들어감</span></span><br><span class="line">print(var_num , var_kr)</span><br><span class="line">print(var_bol , var_kr)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5678 테스트</span><br><span class="line">False 테스트</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--========================[구분선]============================-->
+<h6 id="-11"><a href="#-11" class="headerlink" title></a></h6><hr>
+<h6 id="-12"><a href="#-12" class="headerlink" title></a></h6><!--============================================================-->
+
+<!--[주제]-->
+<h2 id="주석처리"><a href="#주석처리" class="headerlink" title="#주석처리"></a><strong>#주석처리</strong></h2><!--[소주제]-->
+<p><em>코드의 특정 줄이나, 범위를 주석처리 한다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">This is first comment test for my python study.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment">#print(&quot;Comment test&quot;)</span></span><br><span class="line">print(<span class="string">&quot;코멘트 테스트&quot;</span>)</span><br><span class="line">print(<span class="string">&quot;따옴표 세개는 범위주석이고, # 은 한줄 주석이다.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">코멘트 테스트</span><br><span class="line">따옴표 세개는 범위주석이고, # 은 한줄 주석이다.</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-13"><a href="#-13" class="headerlink" title="　"></a>　</h6><h6 id="-14"><a href="#-14" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-15"><a href="#-15" class="headerlink" title></a></h6><hr>
+<h6 id="-16"><a href="#-16" class="headerlink" title></a></h6><!--============================================================-->
+
+<!--[주제]-->
+<h2 id="연산자"><a href="#연산자" class="headerlink" title="#연산자"></a><strong>#연산자</strong></h2><!--[소주제]-->
+<p><em>사칙연산은 생략, 논리연산 중 not 의 사용법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 True</span></span><br><span class="line">print(<span class="number">1</span> != <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 1과 5가 같지 않다는 &quot;참&quot; 이 다시한번 부정 되므로 False</span></span><br><span class="line">print(<span class="keyword">not</span>(<span class="number">1</span> != <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>논리연산 중 AND(&amp;) 와 OR(|) 의 사용법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># AND 는 두가지 모두 True 여야 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">and</span> (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) &amp; (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line"><span class="comment"># OR 는 두가지 중 하나만 True 여도 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">or</span> (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) | (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-19"><a href="#-19" class="headerlink" title="　"></a>　</h6><h6 id="-20"><a href="#-20" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>몫과 나머지를 구하는 방법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 몫 과 나머지도 구할 수 있다.</span></span><br><span class="line">print(<span class="number">20</span> // <span class="number">6</span>)</span><br><span class="line">print(<span class="number">20</span> % <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--========================[구분선]============================-->
+<h6 id="-23"><a href="#-23" class="headerlink" title></a></h6><hr>
+<h6 id="-24"><a href="#-24" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [결론]                             -->
+<!--============================================================-->
+<h1 id="C-랑-비슷한데"><a href="#C-랑-비슷한데" class="headerlink" title="#C 랑 비슷한데?"></a>#C 랑 비슷한데?</h1><p>여기까지는 C 랑 비슷한데, 실제로는 논리연산자를 기호 대신 not, and, or 로 사용하면 가독성이 좋아지는것 같다.</p>
+<!--========================[구분선]============================-->
+<h6 id="-25"><a href="#-25" class="headerlink" title></a></h6><hr>
+<h6 id="-26"><a href="#-26" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [참조]                             -->
+<!--============================================================-->
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=kWiCuklohdY&t=11379s">나도코딩 님의 파이썬 코딩 무료강의</a></li>
+<li><a href="google.com">킹황갓 구글</a></li>
+</ul>
+<!--============================================================-->
+<!--                         [로고]                             -->
+<!--============================================================-->
+<h6 id="-27"><a href="#-27" class="headerlink" title="　"></a>　</h6><h6 id="-28"><a href="#-28" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
+<h6 id="-29"><a href="#-29" class="headerlink" title="　"></a>　</h6>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://pictureyou-neo.github.io/2020/09/16/python-basic-character/" data-id="ckf69znq3000s1cvx5byt6ars" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "pictureyou"
+        },
+        "headline": "Python basic / 파이썬 문자열, 주석, 연산자",
+        "image": "http://pictureyou-neo.github.io/images/rabbit-100.png",
+        "keywords": "python comment character calculate 파이썬 주석 문자열 연산자 기초 basic py",
+        "genre": "4_Study Python",
+        "datePublished": "2020-09-16",
+        "dateCreated": "2020-09-16",
+        "dateModified": "2020-09-17",
+        "url": "http://pictureyou-neo.github.io/2020/09/16/python-basic-character/",
+        "description": "
+
+
+#파이썬 기초앞으로 Python 기본내용에 대해 정리해 보려고 한다.가끔 문법이 혼동될때가 있는데, 정리된 내용을 보고 되새겨 보자.
+
+유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다.기초강의 6시간짜리가 무려 “무료” 다.나는 3시간 더 들어야 한다
+
+　
+
+
+
+
+
+
+#문자열
+print 를 사용하면 콘솔창에 출력이 가능하다.
+
+1234567#",
+        "wordCount": 895
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/pictureyou-neo" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/09/15/vsc-visual-studio-code/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">VSC / 비쥬얼 스튜디오 코드</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/16/python-basic-character/" class="title">Python basic / 파이썬 문자열, 주석, 연산자</a></p>
+                            <p class="item-date"><time datetime="2020-09-16T14:12:29.000Z" itemprop="datePublished">2020/09/16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-General/">3_General</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-General/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/15/vsc-visual-studio-code/" class="title">VSC / 비쥬얼 스튜디오 코드</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T13:00:50.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/15/hexo-theme/" class="title">Hexo / 테마 적용</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T06:10:05.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/15/hexo-install/" class="title">Hexo / 설치</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T05:13:04.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/1-Retro/">1_Retro</a></p>
+                            <p class="item-title"><a href="/2020/09/15/prologue/" class="title">내가 블로그를 해야하는 이유</a></p>
+                            <p class="item-date"><time datetime="2020-09-14T15:46:08.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/md/" style="font-size: 20px;">.md</a> <a href="/tags/FTWR/" style="font-size: 10px;">FTWR</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/MS/" style="font-size: 10px;">MS</a> <a href="/tags/PPOffice/" style="font-size: 20px;">PPOffice</a> <a href="/tags/VSC/" style="font-size: 10px;">VSC</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/calculate/" style="font-size: 10px;">calculate</a> <a href="/tags/character/" style="font-size: 10px;">character</a> <a href="/tags/comment/" style="font-size: 10px;">comment</a> <a href="/tags/extension/" style="font-size: 10px;">extension</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hueman/" style="font-size: 20px;">hueman</a> <a href="/tags/install/" style="font-size: 20px;">install</a> <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/neo/" style="font-size: 10px;">neo</a> <a href="/tags/py/" style="font-size: 10px;">py</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/textedif/" style="font-size: 10px;">textedif</a> <a href="/tags/theme/" style="font-size: 20px;">theme</a> <a href="/tags/visualstudiocode/" style="font-size: 10px;">visualstudiocode</a> <a href="/tags/%EA%B8%B0%EC%B4%88/" style="font-size: 10px;">기초</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/" style="font-size: 10px;">문자열</a> <a href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" style="font-size: 10px;">연산자</a> <a href="/tags/%EC%A3%BC%EC%84%9D/" style="font-size: 10px;">주석</a> <a href="/tags/%EC%B6%94%EC%B2%9C/" style="font-size: 10px;">추천</a> <a href="/tags/%EC%BD%94%EB%93%9C/" style="font-size: 10px;">코드</a> <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" style="font-size: 10px;">파이썬</a> <a href="/tags/%ED%97%A5%EC%86%8C/" style="font-size: 20px;">헥소</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">5</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 pictureyou</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'https-pictureyou-neo-github-io';
+    
+    
+    var disqus_url = 'http://pictureyou-neo.github.io/2020/09/16/python-basic-character/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
