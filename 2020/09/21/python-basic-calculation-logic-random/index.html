@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Python basic / 파이썬 연산자, 숫자처리함수, 랜덤 | FTWR | Follow the white rabbit</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="python,파이썬,기초,basic,py,연산자,calculation,숫자처리함수,abs,절대값,논리연산,랜덤,random,몫,나머지,randint">
+    
+    <meta name="description" content="#파이썬 연산자, 숫자처리함수, 랜덤또다른 기본인 숫자나 연산자 관련 내용이다.  유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다.   　      #연산자 사칙연산은 생략, 논리연산 중 not 의 사용법 이다.  1234# 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 Trueprint(1 !&#x3D; 5)# 1과 5가 같지 않다는">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python basic &#x2F; 파이썬 연산자, 숫자처리함수, 랜덤">
+<meta property="og:url" content="http://pictureyou-neo.github.io/2020/09/21/python-basic-calculation-logic-random/index.html">
+<meta property="og:site_name" content="FTWR | Follow the white rabbit">
+<meta property="og:description" content="#파이썬 연산자, 숫자처리함수, 랜덤또다른 기본인 숫자나 연산자 관련 내용이다.  유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다.   　      #연산자 사칙연산은 생략, 논리연산 중 not 의 사용법 이다.  1234# 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 Trueprint(1 !&#x3D; 5)# 1과 5가 같지 않다는">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pictureyou-neo.github.io/images/rabbit-100.png">
+<meta property="article:published_time" content="2020-09-21T06:32:48.000Z">
+<meta property="article:modified_time" content="2020-09-21T06:35:09.801Z">
+<meta property="article:author" content="pictureyou">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="파이썬">
+<meta property="article:tag" content="기초">
+<meta property="article:tag" content="basic">
+<meta property="article:tag" content="py">
+<meta property="article:tag" content="연산자">
+<meta property="article:tag" content="calculation">
+<meta property="article:tag" content="숫자처리함수">
+<meta property="article:tag" content="abs">
+<meta property="article:tag" content="절대값">
+<meta property="article:tag" content="논리연산">
+<meta property="article:tag" content="랜덤">
+<meta property="article:tag" content="random">
+<meta property="article:tag" content="몫">
+<meta property="article:tag" content="나머지">
+<meta property="article:tag" content="randint">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pictureyou-neo.github.io/images/rabbit-100.png">
+    
+    <link rel="canonical" href="http://pictureyou-neo.github.io/2020/09/21/python-basic-calculation-logic-random/">
+
+    
+
+    
+        <link rel="icon" href="/css/images/fav_nauseatedface.png">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href>
+    
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-178018518-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+    
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FTWR | Follow the white rabbit"> 
+    <meta property="og:description" content="develop log by neo"> 
+    <meta property="og:url" content="http://pictureyou-neo.github.io">
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/rss2.xml" title="FTWR | Follow the white rabbit" type="application/rss+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/">3_General</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/4-Study/Python/">Python</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-python-basic-calculation-logic-random" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Python basic / 파이썬 연산자, 숫자처리함수, 랜덤
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2020/09/21/python-basic-calculation-logic-random/" class="article-date">
+       <time datetime="2020-09-21T06:32:48.000Z" itemprop="datePublished">2020/09/21</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2020/09/21/python-basic-calculation-logic-random/" class="article-date">
+     <time datetime="2020-09-21T06:35:09.801Z" itemprop="dateModified">2020/09/21</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/abs/" rel="tag">abs</a>, <a class="tag-link-link" href="/tags/basic/" rel="tag">basic</a>, <a class="tag-link-link" href="/tags/calculation/" rel="tag">calculation</a>, <a class="tag-link-link" href="/tags/py/" rel="tag">py</a>, <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-link-link" href="/tags/randint/" rel="tag">randint</a>, <a class="tag-link-link" href="/tags/random/" rel="tag">random</a>, <a class="tag-link-link" href="/tags/%EA%B8%B0%EC%B4%88/" rel="tag">기초</a>, <a class="tag-link-link" href="/tags/%EB%82%98%EB%A8%B8%EC%A7%80/" rel="tag">나머지</a>, <a class="tag-link-link" href="/tags/%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0/" rel="tag">논리연산</a>, <a class="tag-link-link" href="/tags/%EB%9E%9C%EB%8D%A4/" rel="tag">랜덤</a>, <a class="tag-link-link" href="/tags/%EB%AA%AB/" rel="tag">몫</a>, <a class="tag-link-link" href="/tags/%EC%88%AB%EC%9E%90%EC%B2%98%EB%A6%AC%ED%95%A8%EC%88%98/" rel="tag">숫자처리함수</a>, <a class="tag-link-link" href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" rel="tag">연산자</a>, <a class="tag-link-link" href="/tags/%EC%A0%88%EB%8C%80%EA%B0%92/" rel="tag">절대값</a>, <a class="tag-link-link" href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" rel="tag">파이썬</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <!--============================================================-->
+<!--                         [서론]                             -->
+<!--============================================================-->
+<h1 id="파이썬-연산자-숫자처리함수-랜덤"><a href="#파이썬-연산자-숫자처리함수-랜덤" class="headerlink" title="#파이썬 연산자, 숫자처리함수, 랜덤"></a>#파이썬 연산자, 숫자처리함수, 랜덤</h1><p>또다른 기본인 숫자나 연산자 관련 내용이다.</p>
+<blockquote>
+<p>유튜버 <strong><em><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw">나도코딩</a></em></strong> 님의 무료강의를 들으면서 정리한 내용이다. </p>
+</blockquote>
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><!--========================[구분선]============================-->
+<h6 id="-1"><a href="#-1" class="headerlink" title></a></h6><hr>
+<h6 id="-2"><a href="#-2" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [본론]                             -->
+<!--============================================================-->
+<!--[주제]-->
+<h2 id="연산자"><a href="#연산자" class="headerlink" title="#연산자"></a><strong>#연산자</strong></h2><!--[소주제]-->
+<p><em>사칙연산은 생략, 논리연산 중 not 의 사용법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 True</span></span><br><span class="line">print(<span class="number">1</span> != <span class="number">5</span>)</span><br><span class="line"><span class="comment"># 1과 5가 같지 않다는 &quot;참&quot; 이 다시한번 부정 되므로 False</span></span><br><span class="line">print(<span class="keyword">not</span>(<span class="number">1</span> != <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+<!--[소주제구분]==================================-->
+<h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제]-->
+<p><em>논리연산 중 AND(&amp;) 와 OR(|) 의 사용법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># AND 는 두가지 모두 True 여야 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">and</span> (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) &amp; (<span class="number">3</span> &lt; <span class="number">5</span>))</span><br><span class="line"><span class="comment"># OR 는 두가지 중 하나만 True 여도 결과가 True 이다.</span></span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) <span class="keyword">or</span> (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br><span class="line">print((<span class="number">3</span> &gt; <span class="number">0</span>) | (<span class="number">3</span> &gt; <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<!--[소주제구분]==================================-->
+<h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제]-->
+<p><em>몫과 나머지를 구하는 방법 이다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 몫 과 나머지도 구할 수 있다.</span></span><br><span class="line">print(<span class="number">20</span> // <span class="number">6</span>)</span><br><span class="line">print(<span class="number">20</span> % <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<!--[소주제구분]==================================-->
+<h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-9"><a href="#-9" class="headerlink" title></a></h6><hr>
+<h6 id="-10"><a href="#-10" class="headerlink" title></a></h6><!--============================================================-->
+
+<!--[주제]-->
+<h2 id="숫자처리-함수"><a href="#숫자처리-함수" class="headerlink" title="#숫자처리 함수"></a><strong>#숫자처리 함수</strong></h2><!--[소주제]-->
+<p><em>기본제공되는 함수들 이다.</em><br><em>여기에 없을 경우 math를 찾아봐야 한다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(abs(<span class="number">-7</span>)) <span class="comment"># 절대값</span></span><br><span class="line">print(pow(<span class="number">2</span>, <span class="number">3</span>)) <span class="comment"># n제곱</span></span><br><span class="line">print(max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">10</span>)) <span class="comment">#최대값</span></span><br><span class="line">print(min(<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>)) <span class="comment">#최소값</span></span><br><span class="line">print(round(<span class="number">1.523</span>)) <span class="comment">#반올림</span></span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">8</span><br><span class="line">10</span><br><span class="line">2</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-11"><a href="#-11" class="headerlink" title="　"></a>　</h6><h6 id="-12"><a href="#-12" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--========================[구분선]============================-->
+<h6 id="-13"><a href="#-13" class="headerlink" title></a></h6><hr>
+<h6 id="-14"><a href="#-14" class="headerlink" title></a></h6><!--============================================================-->
+
+<!--[주제]-->
+<h2 id="랜덤"><a href="#랜덤" class="headerlink" title="#랜덤"></a><strong>#랜덤</strong></h2><!--[소주제]-->
+<p><em>무작위 함수를 이용하여 다양한 곳에 활용할 수 있다.</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br><span class="line">print(random()) <span class="comment"># 0.0 ~ 1.0 미만의 랜덤값 생성</span></span><br><span class="line">print(int(random()*<span class="number">10</span>)+<span class="number">1</span>) <span class="comment"># 1 ~ 10 이하의 값 생성</span></span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0.4270719964728551</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-15"><a href="#-15" class="headerlink" title="　"></a>　</h6><h6 id="-16"><a href="#-16" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[소주제]-->
+<p><em>좀 더 편한 randrange 와 randint 가 있다</em></p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> *</span><br><span class="line">print(randrange(<span class="number">1</span>, <span class="number">46</span>)) <span class="comment"># 1 ~ 46 미만의 임의의 값 생성</span></span><br><span class="line">print(randrange(<span class="number">1</span>, <span class="number">46</span>)) <span class="comment"># 1 ~ 46 미만의 임의의 값 생성</span></span><br><span class="line">print(randrange(<span class="number">1</span>, <span class="number">46</span>)) <span class="comment"># 1 ~ 46 미만의 임의의 값 생성</span></span><br><span class="line">print(randint(<span class="number">1</span>, <span class="number">45</span>)) <span class="comment"># 1 ~ 45 이하의 임의의 값 생성</span></span><br><span class="line">print(randint(<span class="number">1</span>, <span class="number">45</span>)) <span class="comment"># 1 ~ 45 이하의 임의의 값 생성</span></span><br><span class="line">print(randint(<span class="number">1</span>, <span class="number">45</span>)) <span class="comment"># 1 ~ 45 이하의 임의의 값 생성</span></span><br></pre></td></tr></table></figure>
+
+<!--[결과]-->
+<p><strong>결과</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">37</span><br><span class="line">39</span><br><span class="line">31</span><br><span class="line">24</span><br><span class="line">10</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-19"><a href="#-19" class="headerlink" title></a></h6><hr>
+<h6 id="-20"><a href="#-20" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [결론]                             -->
+<!--============================================================-->
+<h1 id="많이-사용되는-내용을-숙지해-둬야겠다"><a href="#많이-사용되는-내용을-숙지해-둬야겠다" class="headerlink" title="#많이 사용되는 내용을 숙지해 둬야겠다."></a>#많이 사용되는 내용을 숙지해 둬야겠다.</h1><p>논리 연산자나 숫자처리 함수는 조건문이나, 어떤 결과를 가공할 때에 많이 쓰인다.</p>
+<!--[소주제구분]==================================-->
+<h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-23"><a href="#-23" class="headerlink" title></a></h6><hr>
+<h6 id="-24"><a href="#-24" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [참조]                             -->
+<!--============================================================-->
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=kWiCuklohdY&t=11379s">나도코딩 님의 파이썬 코딩 무료강의</a></li>
+<li><a href="google.com">킹황갓 구글</a></li>
+</ul>
+<!--============================================================-->
+<!--                         [로고]                             -->
+<!--============================================================-->
+<h6 id="-25"><a href="#-25" class="headerlink" title="　"></a>　</h6><h6 id="-26"><a href="#-26" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
+<h6 id="-27"><a href="#-27" class="headerlink" title="　"></a>　</h6>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://pictureyou-neo.github.io/2020/09/21/python-basic-calculation-logic-random/" data-id="ckfc5p2hp0036hwvf10zc8fnd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "pictureyou"
+        },
+        "headline": "Python basic / 파이썬 연산자, 숫자처리함수, 랜덤",
+        "image": "http://pictureyou-neo.github.io/images/rabbit-100.png",
+        "keywords": "python 파이썬 기초 basic py 연산자 calculation 숫자처리함수 abs 절대값 논리연산 랜덤 random 몫 나머지 randint",
+        "genre": "4_Study Python",
+        "datePublished": "2020-09-21",
+        "dateCreated": "2020-09-21",
+        "dateModified": "2020-09-21",
+        "url": "http://pictureyou-neo.github.io/2020/09/21/python-basic-calculation-logic-random/",
+        "description": "
+
+
+#파이썬 연산자, 숫자처리함수, 랜덤또다른 기본인 숫자나 연산자 관련 내용이다.
+
+유튜버 나도코딩 님의 무료강의를 들으면서 정리한 내용이다. 
+
+　
+
+
+
+
+
+#연산자
+사칙연산은 생략, 논리연산 중 not 의 사용법 이다.
+
+1234# 1과 5가 같은게 아닌 것이 &quot;참&quot; 이므로 Trueprint(1 != 5)# 1과 5가 같지 않다는 ",
+        "wordCount": 784
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/pictureyou-neo" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/09/21/hexo-markdown-troubleshooting-fix-change/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo / 마크다운, 줄바꿈, 들여쓰기, 프리뷰, scaffold</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/21/python-basic-calculation-logic-random/" class="title">Python basic / 파이썬 연산자, 숫자처리함수, 랜덤</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T06:32:48.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/21/hexo-markdown-troubleshooting-fix-change/" class="title">Hexo / 마크다운, 줄바꿈, 들여쓰기, 프리뷰, scaffold</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T03:09:32.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/16/python-basic-character/" class="title">Python basic / 파이썬 문자열 기본, 문자열 제어, 주석처리</a></p>
+                            <p class="item-date"><time datetime="2020-09-16T14:12:29.000Z" itemprop="datePublished">2020/09/16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-General/">3_General</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-General/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/15/vsc-visual-studio-code/" class="title">VSC / 비쥬얼 스튜디오 코드</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T13:00:50.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/15/hexo-theme/" class="title">Hexo / 테마 적용</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T06:10:05.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/less/" style="font-size: 10px;">.less</a> <a href="/tags/md/" style="font-size: 20px;">.md</a> <a href="/tags/FTWR/" style="font-size: 10px;">FTWR</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/MS/" style="font-size: 10px;">MS</a> <a href="/tags/PPOffice/" style="font-size: 15px;">PPOffice</a> <a href="/tags/Preview/" style="font-size: 10px;">Preview</a> <a href="/tags/VSC/" style="font-size: 15px;">VSC</a> <a href="/tags/abs/" style="font-size: 10px;">abs</a> <a href="/tags/basic/" style="font-size: 15px;">basic</a> <a href="/tags/calculation/" style="font-size: 10px;">calculation</a> <a href="/tags/character/" style="font-size: 10px;">character</a> <a href="/tags/comment/" style="font-size: 10px;">comment</a> <a href="/tags/escape/" style="font-size: 10px;">escape</a> <a href="/tags/extension/" style="font-size: 10px;">extension</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hueman/" style="font-size: 15px;">hueman</a> <a href="/tags/inline/" style="font-size: 10px;">inline</a> <a href="/tags/install/" style="font-size: 15px;">install</a> <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/neo/" style="font-size: 10px;">neo</a> <a href="/tags/newline/" style="font-size: 10px;">newline</a> <a href="/tags/print/" style="font-size: 10px;">print</a> <a href="/tags/py/" style="font-size: 15px;">py</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/randint/" style="font-size: 10px;">randint</a> <a href="/tags/random/" style="font-size: 10px;">random</a> <a href="/tags/scaffold/" style="font-size: 10px;">scaffold</a> <a href="/tags/template/" style="font-size: 10px;">template</a> <a href="/tags/textedif/" style="font-size: 10px;">textedif</a> <a href="/tags/theme/" style="font-size: 15px;">theme</a> <a href="/tags/visualstudiocode/" style="font-size: 10px;">visualstudiocode</a> <a href="/tags/%EA%B8%B0%EC%B4%88/" style="font-size: 15px;">기초</a> <a href="/tags/%EB%82%98%EB%A8%B8%EC%A7%80/" style="font-size: 10px;">나머지</a> <a href="/tags/%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0/" style="font-size: 10px;">논리연산</a> <a href="/tags/%EB%93%A4%EC%97%AC%EC%93%B0%EA%B8%B0/" style="font-size: 10px;">들여쓰기</a> <a href="/tags/%EB%9E%9C%EB%8D%A4/" style="font-size: 10px;">랜덤</a> <a href="/tags/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/" style="font-size: 10px;">마크다운</a> <a href="/tags/%EB%AA%AB/" style="font-size: 10px;">몫</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/" style="font-size: 10px;">문자열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%A0%9C%EC%96%B4/" style="font-size: 10px;">문자열제어</a> <a href="/tags/%EC%88%AB%EC%9E%90%EC%B2%98%EB%A6%AC%ED%95%A8%EC%88%98/" style="font-size: 10px;">숫자처리함수</a> <a href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" style="font-size: 10px;">연산자</a> <a href="/tags/%EC%A0%88%EB%8C%80%EA%B0%92/" style="font-size: 10px;">절대값</a> <a href="/tags/%EC%A3%BC%EC%84%9D/" style="font-size: 10px;">주석</a> <a href="/tags/%EC%A4%84%EB%B0%94%EA%BF%88/" style="font-size: 10px;">줄바꿈</a> <a href="/tags/%EC%B6%94%EC%B2%9C/" style="font-size: 10px;">추천</a> <a href="/tags/%EC%BD%94%EB%93%9C/" style="font-size: 10px;">코드</a> <a href="/tags/%ED%83%88%EC%B6%9C%EB%AC%B8%EC%9E%90/" style="font-size: 10px;">탈출문자</a> <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" style="font-size: 15px;">파이썬</a> <a href="/tags/%ED%97%A5%EC%86%8C/" style="font-size: 20px;">헥소</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">7</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 pictureyou</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'https-pictureyou-neo-github-io';
+    
+    
+    var disqus_url = 'http://pictureyou-neo.github.io/2020/09/21/python-basic-calculation-logic-random/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
