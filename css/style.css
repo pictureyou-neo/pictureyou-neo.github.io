@@ -112,11 +112,13 @@
 .article-entry ul {
   list-style: disc;
   list-style-position: inside;
+  color: #fff;
 }
 .widget ol,
 .article-entry ol {
   list-style: decimal;
   list-style-position: inside;
+  color: #009a22;
 }
 .widget dt,
 .article-entry dt {
@@ -234,7 +236,7 @@ body,
   background: #009a22;
 }
 body {
-  background: #383b3f;
+  background: #303337;
   font: 14px 'Noto Sans KR', 'FontAwesome', sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -1133,10 +1135,11 @@ a.article-title:hover {
   margin: 1.3em 0;
 }
 .article-entry a {
-  color: #009a22;
+  color: #fff;
   text-decoration: none;
 }
 .article-entry a:hover {
+  color: #009a22;
   text-decoration: underline;
 }
 .article-entry figcaption a {
@@ -1180,13 +1183,13 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  color: #009a22;
+  color: #fff;
   quote: none;
   margin: 1.6em 20px;
   position: relative;
   font-style: italic;
   padding-left: 20px;
-  border-left: 5px solid #009a22;
+  border-left: 5px solid #fff;
 }
 .article-entry blockquote:before {
   top: 0;
@@ -1250,7 +1253,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #383b3f;
+  background: #303337;
   color: #aaa;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -1324,7 +1327,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #383b3f;
+  background: #303337;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -1630,7 +1633,7 @@ color-border.archives-wrap {
   padding: 0px 30px 30px 30px;
 }
 #footer #back-to-top {
-  background: #383b3f;
+  background: #303337;
   color: #777;
   overflow: hidden;
   text-align: center;

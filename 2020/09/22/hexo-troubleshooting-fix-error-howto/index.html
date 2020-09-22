@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/vehicle.png">
 <meta property="article:published_time" content="2020-09-22T03:35:25.000Z">
-<meta property="article:modified_time" content="2020-09-22T07:49:11.383Z">
+<meta property="article:modified_time" content="2020-09-22T09:33:30.481Z">
 <meta property="article:author" content="pictureyou">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="PPOffice">
@@ -225,7 +225,7 @@ ga('send', 'pageview');
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2020/09/22/hexo-troubleshooting-fix-error-howto/" class="article-date">
-     <time datetime="2020-09-22T07:49:11.383Z" itemprop="dateModified">2020/09/22</time>
+     <time datetime="2020-09-22T09:33:30.481Z" itemprop="dateModified">2020/09/22</time>
   </a>
 </div>
 
@@ -257,8 +257,22 @@ ga('send', 'pageview');
 <!--============================================================-->
 <h1 id="닦고-조이고-기름치자"><a href="#닦고-조이고-기름치자" class="headerlink" title="#닦고 조이고 기름치자"></a>#닦고 조이고 기름치자</h1><p>　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.</p>
 <p><img src="vehicle.png" alt="잘 굴러가기만 하면 되겠지 뭐..."></p>
-<p><strong><em>내부 링크를 여기에 걸어볼까?</em></strong></p>
-<p><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8">테스트</a></p>
+<div style="padding:10px; background-color:#464a4f">
+<div style="padding-left:30px;">
+
+<h2 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h2><ul>
+<li><a href="#list1">카테고리 추가시 이름에 index. 가 항상 붙는 문제</a></li>
+<li><a href="#list2">메인바디 텍스트 영역, 사이드바 색 변경</a></li>
+<li><a href="#list3">Cannot GET /</a></li>
+<li><a href="#list4">[Git] fatal : refusing to merge unrelated histories</a></li>
+<li><a href="#list5">\f0d7 깨짐 현상, FontAwesome</a></li>
+<li><a href="#list6">사이드바 크기 줄이기</a></li>
+<li><a href="#list7">이미지가 안뜨는 경우</a></li>
+</ul>
+</div>
+</div>
+
+
 <!--[소주제구분]==================================-->
 <h6 id><a href="#" class="headerlink" title="　"></a>　</h6><h6 id="-1"><a href="#-1" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
@@ -274,6 +288,7 @@ ga('send', 'pageview');
 <!--============================================================-->
 
 <!--[주제]-->
+<p><a name="list1"></a></p>
 <h2 id="카테고리-추가시-이름에-index-가-항상-붙는-문제"><a href="#카테고리-추가시-이름에-index-가-항상-붙는-문제" class="headerlink" title="#카테고리 추가시 이름에 index. 가 항상 붙는 문제"></a><strong>#카테고리 추가시 이름에 index. 가 항상 붙는 문제</strong></h2><!--[소주제]-->
 <p>　포스트에서 <em>-categories</em> 를 활용하면, Hexo 블로그 상단메뉴에 항목으로 추가가 가능하다. 그런데, Hueman 테마를 설치 후에 “index.” 가 카테고리 이름 앞에 항상 붙어서 나오는 것을 확인하였다.</p>
 <p><img src="issue_index.png" alt="index. 가 자동으로 붙어서 나온다"></p>
@@ -301,6 +316,7 @@ ga('send', 'pageview');
 <h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><h6 id="-11"><a href="#-11" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
 <!--[주제]-->
+<p><a name="list2"></a></p>
 <h2 id="메인바디-텍스트-영역-사이드바-색-변경"><a href="#메인바디-텍스트-영역-사이드바-색-변경" class="headerlink" title="#메인바디 텍스트 영역, 사이드바 색 변경"></a><strong>#메인바디 텍스트 영역, 사이드바 색 변경</strong></h2><!--[소주제]-->
 <p>　Hexo 를 설치한 뒤에, 테마 폴더 안에 있는 <strong>_config.yml</strong> 을 사용하여 여러 커스텀 설정과 색 변경을 했는데, 유독 메인바디 텍스트 영역과 사이드바 배경은 색변경이 불가능 했었다.</p>
 <p><img src="issue_color.png" alt="도당최 어디서 바꾸는거여..."></p>
@@ -333,6 +349,7 @@ ga('send', 'pageview');
 
 
 <!--[주제]-->
+<p><a name="list3"></a></p>
 <h2 id="Cannot-GET"><a href="#Cannot-GET" class="headerlink" title="#Cannot GET /"></a><strong>#Cannot GET /</strong></h2><!--[소주제]-->
 <p>　Hexo 사용 초기에는 내가 쓴 포스트가 없는 상태에서 hello world.md 파일만 달랑 있었다. 순서가 어찌되었는지는 기억이 잘 나지 않으나, hexo server 명령으로 로컬서버에서 돌렸는데 웬 에러와 함께 블로그 전체가 보이지 않았다.</p>
 <p><img src="issue_cannot.png" alt="블로그 증발"></p>
@@ -351,7 +368,8 @@ ga('send', 'pageview');
 
 
 <!--[주제]-->
-<h2 id="Git-fatal-refusing-to-merge-unrelated-histories"><a href="#Git-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="#[Git] fatal : refusing to merge unrelated histories/"></a><strong>#[Git] fatal : refusing to merge unrelated histories/</strong></h2><!--[소주제]-->
+<p><a name="list4"></a></p>
+<h2 id="Git-fatal-refusing-to-merge-unrelated-histories"><a href="#Git-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="#[Git] fatal : refusing to merge unrelated histories"></a><strong>#[Git] fatal : refusing to merge unrelated histories</strong></h2><!--[소주제]-->
 <p>　Git 을 사용하게 된 주된 이유중 하나는 사무실컴과 집컴 간의 usb 복붙 노가다를 안하기 위해서 였다. 다른 프로젝트도 이와같이 잘 사용하고 있었고, Hexo 사용 초기에도 얼른 내가 원하는대로 꾸미고 싶은 마음에 하루에 열번도 넘게 deploy 해 보던 시기가 있었다. 백업을 위해 push 를 했지만 불가. 집에서 pull을 해보려 해도 에러만 나왔다.</p>
 <p><img src="issue_gitfatal.png" alt="Push 도 안되고, Pull 도 안되고"></p>
 <p>　원인은, hexo deploy 명령으로 인해 Github 원격저장소에 commit 되는 내용과 실제 내가 로컬에서 작업한 내용이 달라서 그렇다. 좀 더 이해하기 쉽게 Source tree로 보면 이렇게 생겼고, site update 는 deploy 하면서 생기는 commit 이다. 즉, 예상치 못한 branch 가 생긴 셈이다.</p>
@@ -373,6 +391,7 @@ ga('send', 'pageview');
 
 
 <!--[주제]-->
+<p><a name="list5"></a></p>
 <h2 id="f0d7-깨짐-현상-FontAwesome"><a href="#f0d7-깨짐-현상-FontAwesome" class="headerlink" title="#\f0d7 깨짐 현상, FontAwesome"></a><strong>#\f0d7 깨짐 현상, FontAwesome</strong></h2><!--[소주제]-->
 <p>　Hueman 테마를 이리저리 갖고 놀다가, 갑자기 블로그 메인 화면에 카테고리 옆에 네모 박스가 생긴 것을 발견했다. 이외에도 여러 군데에서 이 정체불명의 박스를 발견할수 있었다.</p>
 <p><img src="issue_box.png" alt="웬 네모?"><br>　<br><strong>해결방법</strong></p>
@@ -393,6 +412,7 @@ ga('send', 'pageview');
 
 
 <!--[주제]-->
+<p><a name="list6"></a></p>
 <h2 id="사이드바-크기-줄이기"><a href="#사이드바-크기-줄이기" class="headerlink" title="#사이드바 크기 줄이기"></a><strong>#사이드바 크기 줄이기</strong></h2><!--[소주제]-->
 <p>　포스팅을 하다보니 사이드바가 쓸데없이 넓대대 한 느낌을 받아서 슬림하게 만들고 싶었다.</p>
 <p><strong>해결방법</strong></p>
@@ -418,6 +438,7 @@ ga('send', 'pageview');
 
 
 <!--[주제]-->
+<p><a name="list7"></a></p>
 <h2 id="이미지가-안뜨는-경우"><a href="#이미지가-안뜨는-경우" class="headerlink" title="#이미지가 안뜨는 경우"></a><strong>#이미지가 안뜨는 경우</strong></h2><!--[소주제]-->
 <p>　가끔 포스팅에 이미지가 안뜨는 경우가 있다.</p>
 <p><img src="issue_imagebox.png" alt="또 다시 등장한 정체불명의 박스"></p>
@@ -449,7 +470,7 @@ ga('send', 'pageview');
 <!--============================================================-->
 <!--                         [참조]                             -->
 <!--============================================================-->
-<p>테스트</p>
+
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
 <li><a href="google.com">킹황갓 구글</a></li>
 <li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman/pull/81">PPOffice</a></li>
@@ -466,7 +487,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/" data-id="ckfdnsd54004zgkvf22p8dswo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/" data-id="ckfdrhuxs001f68vfh7bn3y08" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -549,7 +570,7 @@ ga('send', 'pageview');
 
 #닦고 조이고 기름치자　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.
 ",
-        "wordCount": 1514
+        "wordCount": 1559
     }
 </script>
 
