@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Hexo / trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바 | FTWR | Follow the white rabbit</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="hexo,PPOffice,theme,hueman,헥소,테마,troubleshooting,에러,해결,사이드바,sidebar,color,카테고리,index.,색변경,색깔변경,FontAwesome">
+    
+    <meta name="description" content="#닦고 조이고 기름치자　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo &#x2F; trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바">
+<meta property="og:url" content="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/index.html">
+<meta property="og:site_name" content="FTWR | Follow the white rabbit">
+<meta property="og:description" content="#닦고 조이고 기름치자　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/vehicle.png">
+<meta property="article:published_time" content="2020-09-22T03:35:25.000Z">
+<meta property="article:modified_time" content="2020-09-22T06:06:17.661Z">
+<meta property="article:author" content="pictureyou">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="PPOffice">
+<meta property="article:tag" content="theme">
+<meta property="article:tag" content="hueman">
+<meta property="article:tag" content="헥소">
+<meta property="article:tag" content="테마">
+<meta property="article:tag" content="troubleshooting">
+<meta property="article:tag" content="에러">
+<meta property="article:tag" content="해결">
+<meta property="article:tag" content="사이드바">
+<meta property="article:tag" content="sidebar">
+<meta property="article:tag" content="color">
+<meta property="article:tag" content="카테고리">
+<meta property="article:tag" content="index.">
+<meta property="article:tag" content="색변경">
+<meta property="article:tag" content="색깔변경">
+<meta property="article:tag" content="FontAwesome">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/vehicle.png">
+    
+    <link rel="canonical" href="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/">
+
+    
+
+    
+        <link rel="icon" href="/css/images/fav_nauseatedface.png">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href>
+    
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-178018518-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+    
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FTWR | Follow the white rabbit"> 
+    <meta property="og:description" content="develop log by neo"> 
+    <meta property="og:url" content="http://pictureyou-neo.github.io">
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/rss2.xml" title="FTWR | Follow the white rabbit" type="application/rss+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/">3_General</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/2-Web/Hexo/">Hexo</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-hexo-troubleshooting-fix-error-howto" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo / trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2020/09/22/hexo-troubleshooting-fix-error-howto/" class="article-date">
+       <time datetime="2020-09-22T03:35:25.000Z" itemprop="datePublished">2020/09/22</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2020/09/22/hexo-troubleshooting-fix-error-howto/" class="article-date">
+     <time datetime="2020-09-22T06:06:17.661Z" itemprop="dateModified">2020/09/22</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/FontAwesome/" rel="tag">FontAwesome</a>, <a class="tag-link-link" href="/tags/PPOffice/" rel="tag">PPOffice</a>, <a class="tag-link-link" href="/tags/color/" rel="tag">color</a>, <a class="tag-link-link" href="/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link-link" href="/tags/hueman/" rel="tag">hueman</a>, <a class="tag-link-link" href="/tags/index/" rel="tag">index.</a>, <a class="tag-link-link" href="/tags/sidebar/" rel="tag">sidebar</a>, <a class="tag-link-link" href="/tags/theme/" rel="tag">theme</a>, <a class="tag-link-link" href="/tags/troubleshooting/" rel="tag">troubleshooting</a>, <a class="tag-link-link" href="/tags/%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94/" rel="tag">사이드바</a>, <a class="tag-link-link" href="/tags/%EC%83%89%EA%B9%94%EB%B3%80%EA%B2%BD/" rel="tag">색깔변경</a>, <a class="tag-link-link" href="/tags/%EC%83%89%EB%B3%80%EA%B2%BD/" rel="tag">색변경</a>, <a class="tag-link-link" href="/tags/%EC%97%90%EB%9F%AC/" rel="tag">에러</a>, <a class="tag-link-link" href="/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/" rel="tag">카테고리</a>, <a class="tag-link-link" href="/tags/%ED%85%8C%EB%A7%88/" rel="tag">테마</a>, <a class="tag-link-link" href="/tags/%ED%95%B4%EA%B2%B0/" rel="tag">해결</a>, <a class="tag-link-link" href="/tags/%ED%97%A5%EC%86%8C/" rel="tag">헥소</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <!--============================================================-->
+<!--                         [서론]                             -->
+<!--============================================================-->
+<h1 id="닦고-조이고-기름치자"><a href="#닦고-조이고-기름치자" class="headerlink" title="#닦고 조이고 기름치자"></a>#닦고 조이고 기름치자</h1><p>　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.</p>
+<p><img src="vehicle.png" alt="잘 굴러가기만 하면 되겠지 뭐..."></p>
+<p><strong><em>내부 링크를 여기에 걸어볼까?</em></strong></p>
+<!--[소주제구분]==================================-->
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><h6 id="-1"><a href="#-1" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-2"><a href="#-2" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+
+<!--[소주제구분]==================================-->
+<h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--============================================================-->
+<!--                         [본론]                             -->
+<!--============================================================-->
+
+<!--[주제]-->
+<h2 id="카테고리-추가시-이름에-index-가-항상-붙는-문제"><a href="#카테고리-추가시-이름에-index-가-항상-붙는-문제" class="headerlink" title="#카테고리 추가시 이름에 index. 가 항상 붙는 문제"></a><strong>#카테고리 추가시 이름에 index. 가 항상 붙는 문제</strong></h2><!--[소주제]-->
+<p>　포스트에서 <em>-categories</em> 를 활용하면, Hexo 블로그 상단메뉴에 항목으로 추가가 가능하다. 그런데, Hueman 테미를 설치 후에 “index.” 가 카테고리 이름 앞에 항상 붙어서 나오는 것을 확인하였다.</p>
+<p><img src="issue_index.png" alt="index. 가 자동으로 붙어서 나온다"></p>
+<p>　원인은, 테마 개발자가 메뉴바 번역(?) 을 위해 적어논 코드가 배포버전에서 제외되지 않은듯 하다. 아마 디버깅 목적이 아니었을까?</p>
+<p><strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman/pull/81">해결방법</a></strong></p>
+<blockquote>
+<p><em>themes\hueman\layout\common</em> </p>
+</blockquote>
+<p>　이 경로의 <em>header.ejs</em> 파일에 보면, 이런 부분이 있다.</p>
+<p>　__(‘index.’ + i.toLowerCase())</p>
+<p>　이걸 이렇게 바꾸면 된다. 나는 전체 소문자 변경도 빼고 싶어서 i 만 남겨두었다.<br>　<br>　__(i)</p>
+<p>　코드는 이렇게 생겼다.</p>
+<!--[코드]-->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    &lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-link&quot;</span> href=<span class="string">&quot;&lt;%- url_for(theme.menu[i]) %&gt;&quot;</span>&gt;&lt;%= __(i) %&gt;&lt;/a&gt;</span><br><span class="line">    &lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-child&quot;</span>&gt;</span><br><span class="line">        &lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-item&quot;</span>&gt;</span><br><span class="line">            &lt;% <span class="keyword">for</span> (<span class="keyword">var</span> j <span class="keyword">in</span> theme.menu[i]) &#123; %&gt;</span><br><span class="line">                &lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-link&quot;</span> href=<span class="string">&quot;&lt;%- url_for(theme.menu[i][j]) %&gt;&quot;</span>&gt;&lt;%= __(j) %&gt;&lt;/a&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/li&gt;</span><br><span class="line">&lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-item&quot;</span> &gt;</span><br><span class="line">    &lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main-nav-list-link&quot;</span> href=<span class="string">&quot;&lt;%- url_for(theme.menu[i]) %&gt;&quot;</span>&gt;&lt;%= __(i) %&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+
+<!--[소주제구분]==================================-->
+<h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+
+<!--[소주제구분]==================================-->
+<h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><h6 id="-11"><a href="#-11" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--[주제]-->
+<h2 id="메인바디-텍스트-영역-사이드바-색-변경"><a href="#메인바디-텍스트-영역-사이드바-색-변경" class="headerlink" title="#메인바디 텍스트 영역, 사이드바 색 변경"></a><strong>#메인바디 텍스트 영역, 사이드바 색 변경</strong></h2><!--[소주제]-->
+<p>　Hexo 를 설치한 뒤에, 테마 폴더 안에 있는 <strong>_config.yml</strong> 을 사용하여 여러 커스텀 설정과 색 변경을 했는데, 유독 메인바디 텍스트 영역과 사이드바 배경은 색변경이 불가능 했었다.</p>
+<p><img src="issue_color.png" alt="도당최 어디서 바꾸는거여..."></p>
+<p>　처음 시도해 봤던 방식은 노가다 였다. 화면을 캡쳐해서 포토샵으로 띄우고 사이드바 색 (#F0F0F0) 과 텍스트 영역 배경색 (#000000) 을 VSC 에서 전체 검색으로 찾아서 다른색으로 바꿔보는 방법 이었다. 단시간에 해결이 안되다보니 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://feel5ny.github.io/">필오</a>님의 github 에서 받아두었던 폴더도 뒤져보다 보니, <strong>style.css</strong> 파일을 건드리면 될것만 같았다. 하지만, 직접 그 파일을 수정하여도 원하는대로 색이 바뀌지 않았다.</p>
+<p><strong>해결방법</strong></p>
+<blockquote>
+<p><em>themes\hueman\source\css</em> </p>
+</blockquote>
+<p>　이 경로의 <em>style.styl</em> 파일을 수정하면 style.css 파일에 반영된다.</p>
+<!--[코드]-->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.main-body</span><br><span class="line">    margin-top: - nav-height</span><br><span class="line">    background-color: color-main-background</span><br></pre></td></tr></table></figure>
+
+<p>　이렇게 하고 나서도 여전히 사이드바는 색이 그대로 이다. 이건 다른 방법으로 해결해야 한다.</p>
+<p><strong>해결방법</strong></p>
+<blockquote>
+<p><em>themes\hueman\source\css\images</em> </p>
+</blockquote>
+<p>　이 경로의 <em>s-left.png</em> 파일이 아래 코드에서 불리고 있다. 대충 통밥으로 읽어보면 sidebar 설정이 오른쪽일 경우와 그렇지 않을경우에, sidebar background 영역에 <em>s-left.png</em> 파일을 반복해서 그려주는것으로 보인다. 실제로 포토샵으로 <em>s-left.png</em> 파일을 불러서 색변경 해주면, 반영되는걸 볼 수 있다.</p>
+<!--[코드]-->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.main-body-inner</span><br><span class="line">    clearfix()</span><br><span class="line">    position: relative</span><br><span class="line">    box-sizing: border-box</span><br><span class="line">    box-shadow: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.0980392</span>) <span class="number">0</span>px <span class="number">1</span>px <span class="number">1</span>px <span class="number">0</span>px</span><br><span class="line">    <span class="keyword">if</span> sidebar is right</span><br><span class="line">        padding-right: sidebar-width</span><br><span class="line">        background: url(images/s-left.png) repeat-y right <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        padding-left: sidebar-width</span><br><span class="line">        background: url(images/s-left.png) repeat-y left <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+<!--[소주제구분]==================================-->
+<h6 id="-12"><a href="#-12" class="headerlink" title="　"></a>　</h6><h6 id="-13"><a href="#-13" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-14"><a href="#-14" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-15"><a href="#-15" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-16"><a href="#-16" class="headerlink" title="　"></a>　</h6><h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--[주제]-->
+<h2 id="Cannot-GET"><a href="#Cannot-GET" class="headerlink" title="#Cannot GET /"></a><strong>#Cannot GET /</strong></h2><!--[소주제]-->
+<p>　Hexo 사용 초기에는 내가 쓴 포스트가 없는 상태에서 hello world.md 파일만 달랑 있었다. 순서가 어찌되었는지는 기억이 잘 나지 않으나, hexo server 명령으로 로컬서버에서 돌렸는데 웬 에러와 함께 블로그 전체가 보이지 않았다.</p>
+<p><img src="issue_cannot.png" alt="블로그 증발"></p>
+<p>　원인은, 포스트가 하나도 없는 상태에서 발생 가능하다. 아마 나도 hello world.md 를 지운 이후에 이러한 에러를 본듯 하다.</p>
+<p><strong>해결방법</strong><br>　포스트를 하나 작성하면 된다. 만약 draft 를 사용중 이라면, 아래와 같이 로컬서버 구동에 옵션을 넣어주면 된다.</p>
+<!--[코드]-->
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><h6 id="-19"><a href="#-19" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-20"><a href="#-20" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><h6 id="-23"><a href="#-23" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--[주제]-->
+<h2 id="Git-fatal-refusing-to-merge-unrelated-histories"><a href="#Git-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="#[Git] fatal : refusing to merge unrelated histories/"></a><strong>#[Git] fatal : refusing to merge unrelated histories/</strong></h2><!--[소주제]-->
+<p>　Git 을 사용하게 된 주된 이유중 하나는 사무실컴과 집컴 간의 usb 복붙 노가다를 안하기 위해서 였다. 다른 프로젝트도 이와같이 잘 사용하고 있었고, Hexo 사용 초기에도 얼른 내가 원하는대로 꾸미고 싶은 마음에 하루에 열번도 넘게 deploy 해 보던 시기가 있었다. 백업을 위해 push 를 했지만 불가. 집에서 pull을 해보려 해도 에러만 나왔다.</p>
+<p><img src="issue_gitfatal.png" alt="Push 도 안되고, Pull 도 안되고"></p>
+<p>　원인은, hexo deploy 명령으로 인해 Github 원격저장소에 commit 되는 내용과 실제 내가 로컬에서 작업한 내용이 달라서 그렇다. 좀 더 이해하기 쉽게 Source tree로 보면 이렇게 생겼고, site update 는 deploy 하면서 생기는 commit 이다. 즉, 예상치 못한 branch 가 생긴 셈이다.</p>
+<p><img src="issue_gitfatal2.png" alt="저는 master branch 만 쓰는디요?"></p>
+<p><strong>해결방법</strong><br>　Merge 해도 된다. 근데 귀찮기 때문에 다른 방법을 찾던 중, <strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://futurecreator.github.io/">Eric Han</a></strong> 님의 블로그에서 이러한 내용을 잘 설명해 둔 포스트를 발견했다. <strong>나중에 해봐야지.</strong></p>
+<blockquote>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://futurecreator.github.io/2018/07/18/hexo-blog-backup/">Hexo 배포 원리와 백업하기</a></p>
+</blockquote>
+<!--[코드]-->
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-24"><a href="#-24" class="headerlink" title="　"></a>　</h6><h6 id="-25"><a href="#-25" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-26"><a href="#-26" class="headerlink" title></a></h6><hr>
+<h6 id="-27"><a href="#-27" class="headerlink" title></a></h6><!--========================[구분선]============================-->
+<!--[소주제구분]==================================-->
+<h6 id="-28"><a href="#-28" class="headerlink" title="　"></a>　</h6><h6 id="-29"><a href="#-29" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--[주제]-->
+<h2 id="f0d7-깨짐-현상-FontAwesome"><a href="#f0d7-깨짐-현상-FontAwesome" class="headerlink" title="#\f0d7 깨짐 현상, FontAwesome"></a><strong>#\f0d7 깨짐 현상, FontAwesome</strong></h2><!--[소주제]-->
+<p>　Hueman 테마를 이리저리 갖고 놀다가, 갑자기 블로그 메인 화면에 카테고리 옆에 네모 박스가 생긴 것을 발견했다. 이외에도 여러 군데에서 이 정체불명의 박스를 발견할수 있었다.</p>
+<p><img src="issue_box.png" alt="웬 네모?"><br>　<br><strong>해결방법</strong></p>
+<blockquote>
+<p><em>themes\hueman\source\css_variables.styl</em> </p>
+</blockquote>
+<p>　<em>FontAwesome</em> 폰트를 찾을 수 없어서 발생한 현상이다. 웹폰트를 적용해 본다고 이것저것 건드리다가, 지워버렸다. 아래와 같이 <strong>‘FontAwesome’</strong> 을 복구시켜 주면, 정상적으로 그림이 뜬다. FontAwesome 은 사전 정의된 그림을 폰트화 하여 사용할 수 있는것 같다. 나중에 웹페이지 작성시 간단한 아이콘은 이 폰트로 대체가 가능할것 같다.<br>　만일 이렇게 해도 안된다면, 해당 코드 (나의 경우는 깨지는 아이콘이 \f0d7 이었다)를 찾아서 css 나 styl 파일에서 사이즈 변경이나 여백 쪽을 확인해 보면 된다.</p>
+<!--[코드]-->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-sans = <span class="string">&#x27;Noto Sans KR&#x27;</span>, <span class="string">&#x27;FontAwesome&#x27;</span>, sans-serif</span><br></pre></td></tr></table></figure>
+
+<!--[소주제구분]==================================-->
+<h6 id="-30"><a href="#-30" class="headerlink" title="　"></a>　</h6><h6 id="-31"><a href="#-31" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-32"><a href="#-32" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-33"><a href="#-33" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-34"><a href="#-34" class="headerlink" title="　"></a>　</h6><h6 id="-35"><a href="#-35" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--[주제]-->
+<h2 id="사이드바-크기-줄이기"><a href="#사이드바-크기-줄이기" class="headerlink" title="#사이드바 크기 줄이기"></a><strong>#사이드바 크기 줄이기</strong></h2><!--[소주제]-->
+<p>　포스팅을 하다보니 사이드바가 쓸데없이 넓대대 한 느낌을 받아서 슬림하게 만들고 싶었다.</p>
+<p><strong>해결방법</strong></p>
+<blockquote>
+<p><em>themes\hueman\source\css_variables.styl</em> </p>
+</blockquote>
+<p>　우선 위 경로에 가서, <em>sidebar-width</em> 와 <em>sidebar-toggle-width</em> 를 수정한다. 후자는 사이드바가 숨겨져 있는 상태에서 토글되는 사이즈 이다.</p>
+<!--[코드]-->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Sidebar</span></span><br><span class="line">sidebar = hexo-config(<span class="string">&quot;customize.sidebar&quot;</span>)</span><br><span class="line">sidebar-width = <span class="number">250</span>px</span><br><span class="line">sidebar-toggle-width = <span class="number">50</span>px</span><br></pre></td></tr></table></figure>
+
+<p><img src="issue_sidbarsize.png" alt="뭔가 잘못되었다."><br>　<br>　위쪽에서 사이드바 색상 변경 할때 등장했던 <strong>s-left.png</strong> 의 이미지 사이즈를 <em>sidebar-width</em> 와 동일하게 수정해야 한다. 아래 경로에 있다.</p>
+<blockquote>
+<p><em>themes\hueman\source\css\images</em> </p>
+</blockquote>
+<p><img src="issue_sidbarsize2.png" alt="포토샵으로 요렇게"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-36"><a href="#-36" class="headerlink" title="　"></a>　</h6><h6 id="-37"><a href="#-37" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-38"><a href="#-38" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-39"><a href="#-39" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-40"><a href="#-40" class="headerlink" title="　"></a>　</h6><h6 id="-41"><a href="#-41" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--[주제]-->
+<h2 id="이미지가-안뜨는-경우"><a href="#이미지가-안뜨는-경우" class="headerlink" title="#이미지가 안뜨는 경우"></a><strong>#이미지가 안뜨는 경우</strong></h2><!--[소주제]-->
+<p>　가끔 포스팅에 이미지가 안뜨는 경우가 있다.</p>
+<p><img src="issue_imagebox.png" alt="또 다시 등장한 정체불명의 박스"></p>
+<p><strong>해결방법</strong></p>
+<p>　이미지 캡쳐 프로그램 마다 기본 확장자 저장을 다르게한다. 예를들면 .PNG 또는 .png 인 경우다. 확장자에도 대소문자를 맞춰주면 정상적으로 이미지가 보인다. 마치 “;” 빠트려서 빌드에러난 기분이다.</p>
+<p><img src="issue_imagebox2.png" alt="깐깐하네"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-42"><a href="#-42" class="headerlink" title="　"></a>　</h6><h6 id="-43"><a href="#-43" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-44"><a href="#-44" class="headerlink" title="　"></a>　</h6><hr>
+<h6 id="-45"><a href="#-45" class="headerlink" title="　"></a>　</h6><!--============================================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-46"><a href="#-46" class="headerlink" title="　"></a>　</h6><h6 id="-47"><a href="#-47" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<!--============================================================-->
+<!--                         [결론]                             -->
+<!--============================================================-->
+<h1 id="속시원"><a href="#속시원" class="headerlink" title="#속시원"></a>#속시원</h1><p>언제나 그렇듯, 내가 마주한 에러나 궁금증에 대해 해결할 수 있는 정확한 페이지를 찾게 되면 속이 뻥 뚫린다. 앞으로 겪게 될 Hexo 관련 문제해결 내용은 여기에 포스팅 할 예정이다.</p>
+<p><img src="finish.png"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-48"><a href="#-48" class="headerlink" title="　"></a>　</h6><h6 id="-49"><a href="#-49" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-50"><a href="#-50" class="headerlink" title></a></h6><hr>
+<h6 id="-51"><a href="#-51" class="headerlink" title></a></h6><!--========================[구분선]============================-->
+<!--[소주제구분]==================================-->
+<h6 id="-52"><a href="#-52" class="headerlink" title="　"></a>　</h6><h6 id="-53"><a href="#-53" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--============================================================-->
+<!--                         [참조]                             -->
+<!--============================================================-->
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
+<li><a href="google.com">킹황갓 구글</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman/pull/81">PPOffice</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://futurecreator.github.io/">Eric Han</a></li>
+</ul>
+<!--============================================================-->
+<!--                         [로고]                             -->
+<!--============================================================-->
+<h6 id="-54"><a href="#-54" class="headerlink" title="　"></a>　</h6><h6 id="-55"><a href="#-55" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
+<h6 id="-56"><a href="#-56" class="headerlink" title="　"></a>　</h6>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/" data-id="ckfdk2ln8002f20vf0icrgbna" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "pictureyou"
+        },
+        "headline": "Hexo / trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바",
+        "image": "http://pictureyou-neo.github.iovehicle.png",
+        "keywords": "hexo PPOffice theme hueman 헥소 테마 troubleshooting 에러 해결 사이드바 sidebar color 카테고리 index. 색변경 색깔변경 FontAwesome",
+        "genre": "2_Web Hexo",
+        "datePublished": "2020-09-22",
+        "dateCreated": "2020-09-22",
+        "dateModified": "2020-09-22",
+        "url": "http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/",
+        "description": "
+
+
+#닦고 조이고 기름치자　며칠정도 남는시간을 투자하고 나니, Hexo 를 활용한 그럴듯한 나만의 블로그가 만들어 졌다. 하지만 여전히 아쉬운 부분들이 있었고 너무 거슬리는 것도 있었다. 정적웹 페이지가 돌아가는 방식 이나 HTML, CSS, Java script 에 문외한인 내가 구글링으로 문제를 해결해 왔던 것을 메모해 두었고 이곳에 옮겨 적어본다.
+",
+        "wordCount": 1513
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/pictureyou-neo" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/09/21/python-basic-calculation-logic-random/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Python basic / 파이썬 연산자, 숫자처리함수, 랜덤</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/22/hexo-troubleshooting-fix-error-howto/" class="title">Hexo / trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바</a></p>
+                            <p class="item-date"><time datetime="2020-09-22T03:35:25.000Z" itemprop="datePublished">2020/09/22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/21/python-basic-calculation-logic-random/" class="title">Python basic / 파이썬 연산자, 숫자처리함수, 랜덤</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T06:32:48.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/21/hexo-markdown-troubleshooting-fix-change/" class="title">Hexo / 마크다운, 줄바꿈, 들여쓰기, 프리뷰, scaffold</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T03:09:32.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/16/python-basic-character/" class="title">Python basic / 파이썬 문자열 기본, 문자열 제어, 주석처리</a></p>
+                            <p class="item-date"><time datetime="2020-09-16T14:12:29.000Z" itemprop="datePublished">2020/09/16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-General/">3_General</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-General/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/15/vsc-visual-studio-code/" class="title">VSC / 비쥬얼 스튜디오 코드</a></p>
+                            <p class="item-date"><time datetime="2020-09-15T13:00:50.000Z" itemprop="datePublished">2020/09/15</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/less/" style="font-size: 10px;">.less</a> <a href="/tags/md/" style="font-size: 16.67px;">.md</a> <a href="/tags/FTWR/" style="font-size: 10px;">FTWR</a> <a href="/tags/FontAwesome/" style="font-size: 10px;">FontAwesome</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Github/" style="font-size: 13.33px;">Github</a> <a href="/tags/MS/" style="font-size: 10px;">MS</a> <a href="/tags/PPOffice/" style="font-size: 16.67px;">PPOffice</a> <a href="/tags/Preview/" style="font-size: 10px;">Preview</a> <a href="/tags/VSC/" style="font-size: 13.33px;">VSC</a> <a href="/tags/abs/" style="font-size: 10px;">abs</a> <a href="/tags/basic/" style="font-size: 13.33px;">basic</a> <a href="/tags/calculation/" style="font-size: 10px;">calculation</a> <a href="/tags/character/" style="font-size: 10px;">character</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/comment/" style="font-size: 10px;">comment</a> <a href="/tags/escape/" style="font-size: 10px;">escape</a> <a href="/tags/extension/" style="font-size: 10px;">extension</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hueman/" style="font-size: 16.67px;">hueman</a> <a href="/tags/index/" style="font-size: 10px;">index.</a> <a href="/tags/inline/" style="font-size: 10px;">inline</a> <a href="/tags/install/" style="font-size: 13.33px;">install</a> <a href="/tags/markdown/" style="font-size: 16.67px;">markdown</a> <a href="/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/neo/" style="font-size: 10px;">neo</a> <a href="/tags/newline/" style="font-size: 10px;">newline</a> <a href="/tags/print/" style="font-size: 10px;">print</a> <a href="/tags/py/" style="font-size: 13.33px;">py</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/randint/" style="font-size: 10px;">randint</a> <a href="/tags/random/" style="font-size: 10px;">random</a> <a href="/tags/scaffold/" style="font-size: 10px;">scaffold</a> <a href="/tags/sidebar/" style="font-size: 10px;">sidebar</a> <a href="/tags/template/" style="font-size: 10px;">template</a> <a href="/tags/textedif/" style="font-size: 10px;">textedif</a> <a href="/tags/theme/" style="font-size: 16.67px;">theme</a> <a href="/tags/troubleshooting/" style="font-size: 10px;">troubleshooting</a> <a href="/tags/visualstudiocode/" style="font-size: 10px;">visualstudiocode</a> <a href="/tags/%EA%B8%B0%EC%B4%88/" style="font-size: 13.33px;">기초</a> <a href="/tags/%EB%82%98%EB%A8%B8%EC%A7%80/" style="font-size: 10px;">나머지</a> <a href="/tags/%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0/" style="font-size: 10px;">논리연산</a> <a href="/tags/%EB%93%A4%EC%97%AC%EC%93%B0%EA%B8%B0/" style="font-size: 10px;">들여쓰기</a> <a href="/tags/%EB%9E%9C%EB%8D%A4/" style="font-size: 10px;">랜덤</a> <a href="/tags/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/" style="font-size: 10px;">마크다운</a> <a href="/tags/%EB%AA%AB/" style="font-size: 10px;">몫</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/" style="font-size: 10px;">문자열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%A0%9C%EC%96%B4/" style="font-size: 10px;">문자열제어</a> <a href="/tags/%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94/" style="font-size: 10px;">사이드바</a> <a href="/tags/%EC%83%89%EA%B9%94%EB%B3%80%EA%B2%BD/" style="font-size: 10px;">색깔변경</a> <a href="/tags/%EC%83%89%EB%B3%80%EA%B2%BD/" style="font-size: 10px;">색변경</a> <a href="/tags/%EC%88%AB%EC%9E%90%EC%B2%98%EB%A6%AC%ED%95%A8%EC%88%98/" style="font-size: 10px;">숫자처리함수</a> <a href="/tags/%EC%97%90%EB%9F%AC/" style="font-size: 10px;">에러</a> <a href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" style="font-size: 10px;">연산자</a> <a href="/tags/%EC%A0%88%EB%8C%80%EA%B0%92/" style="font-size: 10px;">절대값</a> <a href="/tags/%EC%A3%BC%EC%84%9D/" style="font-size: 10px;">주석</a> <a href="/tags/%EC%A4%84%EB%B0%94%EA%BF%88/" style="font-size: 10px;">줄바꿈</a> <a href="/tags/%EC%B6%94%EC%B2%9C/" style="font-size: 10px;">추천</a> <a href="/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/" style="font-size: 10px;">카테고리</a> <a href="/tags/%EC%BD%94%EB%93%9C/" style="font-size: 10px;">코드</a> <a href="/tags/%ED%83%88%EC%B6%9C%EB%AC%B8%EC%9E%90/" style="font-size: 10px;">탈출문자</a> <a href="/tags/%ED%85%8C%EB%A7%88/" style="font-size: 10px;">테마</a> <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" style="font-size: 13.33px;">파이썬</a> <a href="/tags/%ED%95%B4%EA%B2%B0/" style="font-size: 10px;">해결</a> <a href="/tags/%ED%97%A5%EC%86%8C/" style="font-size: 20px;">헥소</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 pictureyou</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'https-pictureyou-neo-github-io';
+    
+    
+    var disqus_url = 'http://pictureyou-neo.github.io/2020/09/22/hexo-troubleshooting-fix-error-howto/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
