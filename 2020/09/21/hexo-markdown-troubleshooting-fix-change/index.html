@@ -10,7 +10,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="hexo,헥소,markdown,.md,VSC,마크다운,Preview,.less,줄바꿈,newline,들여쓰기,inline,scaffold,template">
+    <meta name="keywords" content="hexo,헥소,VSC,markdown,.md,마크다운,Preview,.less,줄바꿈,newline,들여쓰기,inline,scaffold,template">
     
     <meta name="description" content="#마크다운이 무엇인고?　Github 원격저장소를 처음 만들었을 때 Readme.md 파일을 처음 접하게 되었다. Github 에서는 저장소에 접속하자 마자 보여주는 일종의 표지 역할을 하는데, 거의 대부분 잘 꾸며져 있었다. 나는 원격저장소를 개인적으로 사용하기 때문에 굳이 관심이 없었는데, 헥소를 이용한 포스팅을 할때 마크다운 언어를 사용 할 수밖에">
 <meta property="og:type" content="article">
@@ -21,13 +21,13 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://pictureyou-neo.github.io/2020/09/21/hexo-markdown-troubleshooting-fix-change/markdown.png">
 <meta property="article:published_time" content="2020-09-21T03:09:32.000Z">
-<meta property="article:modified_time" content="2020-09-21T03:48:02.070Z">
+<meta property="article:modified_time" content="2020-09-23T04:21:52.871Z">
 <meta property="article:author" content="pictureyou">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="헥소">
+<meta property="article:tag" content="VSC">
 <meta property="article:tag" content="markdown">
 <meta property="article:tag" content=".md">
-<meta property="article:tag" content="VSC">
 <meta property="article:tag" content="마크다운">
 <meta property="article:tag" content="Preview">
 <meta property="article:tag" content=".less">
@@ -128,7 +128,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
                                 </li>
                             
-                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/">3_General</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-General/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-Review/">3_Review</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-Review/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
                                 
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
@@ -222,7 +222,7 @@ ga('send', 'pageview');
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/2020/09/21/hexo-markdown-troubleshooting-fix-change/" class="article-date">
-     <time datetime="2020-09-21T03:48:02.070Z" itemprop="dateModified">2020/09/21</time>
+     <time datetime="2020-09-23T04:21:52.871Z" itemprop="dateModified">2020/09/23</time>
   </a>
 </div>
 
@@ -256,25 +256,42 @@ ga('send', 'pageview');
 <blockquote>
 <p>마크다운의 역사나, 간단한 사용법은 아래 위키 링크를 참고해 보자.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4">위키백과 : 마크다운</a></p>
 </blockquote>
-<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><!--========================[구분선]============================-->
-<h6 id="-1"><a href="#-1" class="headerlink" title></a></h6><hr>
-<h6 id="-2"><a href="#-2" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><div style="padding:10px; background-color:#464a4f">
+<div style="padding-left:30px;">
+
+<h2 id="목차"><a href="#목차" class="headerlink" title="[목차]"></a>[목차]</h2><ul>
+<li><a href="#list1">줄바꿈은 어떻게 하지? 들여쓰기는?</a></li>
+<li><a href="#list2">문법에 익숙하지 않은 뉴비를 위하여</a></li>
+<li><a href="#list3">프리뷰 창이 밋밋하다면?</a></li>
+<li><a href="#list4">scaffolds 활용, 글의 틀을 만들어 두자</a></li>
+</ul>
+</div>
+</div>
+
+<!--[소주제구분]==================================-->
+<h6 id="-1"><a href="#-1" class="headerlink" title="　"></a>　</h6><h6 id="-2"><a href="#-2" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-3"><a href="#-3" class="headerlink" title></a></h6><hr>
+<h6 id="-4"><a href="#-4" class="headerlink" title></a></h6><!--============================================================-->
 <!--                         [본론]                             -->
 <!--============================================================-->
 
 <!--[주제]-->
+<p><a name="list1"></a></p>
 <h2 id="줄바꿈은-어떻게-하지-들여쓰기는"><a href="#줄바꿈은-어떻게-하지-들여쓰기는" class="headerlink" title="#줄바꿈은 어떻게 하지? 들여쓰기는?"></a><strong>#줄바꿈은 어떻게 하지? 들여쓰기는?</strong></h2><p>　제일 먼저 글을 쓰고, 기본적인 사용방법을 익힌 후 마크다운을 써두었던 글에 적용해 본 다음 로컬 서버에서 확인해 보았다.<br>　그런데 이게 왠걸? 줄바꿈이 하나도 되어있지 않아서 가독성이 떨어지는 문제가 있었다. 그래서 생각해 낸 꼼수가, “######” 으로 작성되는 h6 헤더로 특수문자 [ㄱ 한자] 공백으로 해결할 수 있었다.<br>　사실 내입장에서는 “######” 를 잘 사용하지 않으므로, 적절한 꼼수인듯 하다. 들여쓰기도 이 공백문자를 활용하면 바로 활용 가능하다.</p>
 <p><img src="line_trick.png" alt="꼼수의 정체"><br><img src="null.png" alt="꼼수의 정체"></p>
 <p>　덧붙여서, 줄간격은 hexo 테마의 h6 설정부분에서 xx em 으로 조절이 가능하다.</p>
 <p><img src="h6.png" alt="경로 : themes/hueman/source/css/_extend.styl"></p>
 <!--[소주제구분]==================================-->
-<h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><h6 id="-4"><a href="#-4" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<h6 id="-5"><a href="#-5" class="headerlink" title="　"></a>　</h6><h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
 <!--========================[구분선]============================-->
-<h6 id="-5"><a href="#-5" class="headerlink" title></a></h6><hr>
-<h6 id="-6"><a href="#-6" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id="-7"><a href="#-7" class="headerlink" title></a></h6><hr>
+<h6 id="-8"><a href="#-8" class="headerlink" title></a></h6><!--============================================================-->
 
 <!--[주제]-->
+<p><a name="list2"></a></p>
 <h2 id="문법에-익숙하지-않은-뉴비를-위하여"><a href="#문법에-익숙하지-않은-뉴비를-위하여" class="headerlink" title="#문법에 익숙하지 않은 뉴비를 위하여"></a><strong>#문법에 익숙하지 않은 뉴비를 위하여</strong></h2><p>　VSC 에서는 mark down 문서를 위한 여러가지의 extention 이 있는데, 그중에서 프리뷰 extension 은 매우유용하다. </p>
 <blockquote>
 <p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a><br><img src="preview.png" alt="고인물도 필요한 기능일지도..."></p>
@@ -282,14 +299,15 @@ ga('send', 'pageview');
 <p>　특히, .md 파일을 수정하려고 열게 됨과 동시에 preview 를 띄워 주는게 은근 시간단축에 용이하다. 그렇지 않을경우에는 문서명, 우클릭, 혹은 단축키를 외워야 하는 다소 귀찮음이 동반된다.<br>　자동 프리뷰 설정은, VSC Settings 에 가서 <strong>“Automatically Show Preview of Markdown Being Edited”</strong> 체크박스에 체크를 해주면 된다.</p>
 <p><img src="preview_setting.png" alt="extension 아래쪽에 톱니바퀴로 접근해도 된다"></p>
 <!--[소주제구분]==================================-->
-<h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
 
 <!--========================[구분선]============================-->
-<h6 id="-9"><a href="#-9" class="headerlink" title></a></h6><hr>
-<h6 id="-10"><a href="#-10" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id="-11"><a href="#-11" class="headerlink" title></a></h6><hr>
+<h6 id="-12"><a href="#-12" class="headerlink" title></a></h6><!--============================================================-->
 
 <!--[주제]-->
+<p><a name="list3"></a></p>
 <h2 id="프리뷰-창이-밋밋하다면"><a href="#프리뷰-창이-밋밋하다면" class="headerlink" title="#프리뷰 창이 밋밋하다면?"></a><strong>#프리뷰 창이 밋밋하다면?</strong></h2><p>　프리뷰 extension 을 설치 하더라도, 막상 프리뷰 화면을 보면 흰바탕에 검은 글씨, Hexo 테마에서 내가 정의했던 색이나 글꼴 크기는 온데간데 없다. </p>
 <p><img src="mpe_custom.png" alt="밋밋"></p>
 <p>　Preview 화면을 띄울때 하나의 웹페이지를 띄우는것처럼 동작되어서 Hexo 와는 별개의 CSS 파일이 존재한다. 따라서 Preview 화면을 테마가 적용되어 배포된 블로그 화면처럼 하길 원하거나, 배경색과 폰트및 색깔 변경을 하려면 <strong>“.less”</strong> 파일을 건드려 줘야 한다. style.less 파일을 직접 수정하는 방법과 나만의 less 파일을 추가하여 사용할 수도 있다. </p>
@@ -297,13 +315,14 @@ ga('send', 'pageview');
 <p>MPE(Markdown Preview Enhanced) 페이지에서 아주 자세하게 소개하고 있다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css?id=styleless">Customize CSS</a></p>
 </blockquote>
 <!--[소주제구분]==================================-->
-<h6 id="-11"><a href="#-11" class="headerlink" title="　"></a>　</h6><h6 id="-12"><a href="#-12" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<h6 id="-13"><a href="#-13" class="headerlink" title="　"></a>　</h6><h6 id="-14"><a href="#-14" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
 <!--========================[구분선]============================-->
-<h6 id="-13"><a href="#-13" class="headerlink" title></a></h6><hr>
-<h6 id="-14"><a href="#-14" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id="-15"><a href="#-15" class="headerlink" title></a></h6><hr>
+<h6 id="-16"><a href="#-16" class="headerlink" title></a></h6><!--============================================================-->
 
 <!--[주제]-->
+<p><a name="list4"></a></p>
 <h2 id="scaffolds-활용-글의-틀을-만들어-두자"><a href="#scaffolds-활용-글의-틀을-만들어-두자" class="headerlink" title="#scaffolds 활용, 글의 틀을 만들어 두자"></a><strong>#scaffolds 활용, 글의 틀을 만들어 두자</strong></h2><p>　아무리 markdown 문법을 잘 알고 숙달되었다고 하더라도, 생산성에 도움을 줄 수 없다면 계륵에 불과하다. Hexo 에서 제공하는 <strong>scaffolds</strong> 는 새로운 포스트를 만들었을 때 사전 정의해둔 글의 틀이 마크다운 형식으로 로드 될 수 있게 해준다.<br>　Hexo 패키지의 scaffolds 폴더 내에 있는 <em>.md</em> 파일들을 수정하면 바로 사용 가능하다. 매일매일 이것저것 추가하느라 자주 바뀌지만, 현 시점에서 내가 사용하고 있는 내용은 이렇다.</p>
 <blockquote>
 <p>참고로 아래 내용을 사용하려면 [‘’’] 를 [```] 로 바꿔 써야 한다.</p>
@@ -312,18 +331,18 @@ ga('send', 'pageview');
 
 
 <!--[소주제구분]==================================-->
-<h6 id="-15"><a href="#-15" class="headerlink" title="　"></a>　</h6><h6 id="-16"><a href="#-16" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
 
 
 <!--========================[구분선]============================-->
-<h6 id="-17"><a href="#-17" class="headerlink" title></a></h6><hr>
-<h6 id="-18"><a href="#-18" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id="-19"><a href="#-19" class="headerlink" title></a></h6><hr>
+<h6 id="-20"><a href="#-20" class="headerlink" title></a></h6><!--============================================================-->
 <!--                         [결론]                             -->
 <!--============================================================-->
 <h1 id="이제는-콘텐츠다"><a href="#이제는-콘텐츠다" class="headerlink" title="#이제는 콘텐츠다"></a>#이제는 콘텐츠다</h1><p>　여기까지 하고나니, 이제 얼추 포스팅의 형태가 잡혔다. 이제는 콘텐츠 생산을 해야할 차례 이다. 물론 추가하고 싶은 기능들도 많고 그중에 각주는 최대한 빨리 적용해 볼 생각이다. </p>
 <!--========================[구분선]============================-->
-<h6 id="-19"><a href="#-19" class="headerlink" title></a></h6><hr>
-<h6 id="-20"><a href="#-20" class="headerlink" title></a></h6><!--============================================================-->
+<h6 id="-21"><a href="#-21" class="headerlink" title></a></h6><hr>
+<h6 id="-22"><a href="#-22" class="headerlink" title></a></h6><!--============================================================-->
 <!--                         [참조]                             -->
 <!--============================================================-->
 
@@ -335,15 +354,15 @@ ga('send', 'pageview');
 <!--============================================================-->
 <!--                         [로고]                             -->
 <!--============================================================-->
-<h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
-<h6 id="-23"><a href="#-23" class="headerlink" title="　"></a>　</h6>
+<h6 id="-23"><a href="#-23" class="headerlink" title="　"></a>　</h6><h6 id="-24"><a href="#-24" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
+<h6 id="-25"><a href="#-25" class="headerlink" title="　"></a>　</h6>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://pictureyou-neo.github.io/2020/09/21/hexo-markdown-troubleshooting-fix-change/" data-id="ckfdrhuxp001b68vfb97h8ezr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://pictureyou-neo.github.io/2020/09/21/hexo-markdown-troubleshooting-fix-change/" data-id="ckfew223b002apsvfcs2od82s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -415,17 +434,17 @@ ga('send', 'pageview');
         },
         "headline": "Hexo / 마크다운, 줄바꿈, 들여쓰기, 프리뷰, scaffold",
         "image": "http://pictureyou-neo.github.iomarkdown.png",
-        "keywords": "hexo 헥소 markdown .md VSC 마크다운 Preview .less 줄바꿈 newline 들여쓰기 inline scaffold template",
+        "keywords": "hexo 헥소 VSC markdown .md 마크다운 Preview .less 줄바꿈 newline 들여쓰기 inline scaffold template",
         "genre": "2_Web Hexo",
         "datePublished": "2020-09-21",
         "dateCreated": "2020-09-21",
-        "dateModified": "2020-09-21",
+        "dateModified": "2020-09-23",
         "url": "http://pictureyou-neo.github.io/2020/09/21/hexo-markdown-troubleshooting-fix-change/",
         "description": "
 
 
 #마크다운이 무엇인고?　Github 원격저장소를 처음 만들었을 때 Readme.md 파일을 처음 접하게 되었다. Github 에서는 저장소에 접속하자 마자 보여주는 일종의 표지 역할을 하는데, 거의 대부분 잘 꾸며져 있었다. 나는 원격저장소를 개인적으로 사용하기 때문에 굳이 관심이 없었는데, 헥소를 이용한 포스팅을 할때 마크다운 언어를 사용 할 수밖에",
-        "wordCount": 1154
+        "wordCount": 1191
     }
 </script>
 
@@ -534,7 +553,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/3-General/">3_General</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-General/Tool/">Tool</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-Review/">3_Review</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-Review/Tool/">Tool</a></p>
                             <p class="item-title"><a href="/2020/09/15/vsc-visual-studio-code/" class="title">VSC / 비쥬얼 스튜디오 코드</a></p>
                             <p class="item-date"><time datetime="2020-09-15T13:00:50.000Z" itemprop="datePublished">2020/09/15</time></p>
                         </div>

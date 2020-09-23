@@ -9,42 +9,42 @@
 
     <url>
         <loc>http://pictureyou-neo.github.io/categories/2-Web/Hexo/</loc>
-        <lastmod>2020-09-22T09:33:30.481Z</lastmod>
+        <lastmod>2020-09-23T04:21:52.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://pictureyou-neo.github.io/categories/2-Web/</loc>
-        <lastmod>2020-09-22T09:33:30.481Z</lastmod>
+        <lastmod>2020-09-23T04:21:52.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://pictureyou-neo.github.io/categories/3-Review/Tool/</loc>
+        <lastmod>2020-09-23T04:19:57.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://pictureyou-neo.github.io/categories/3-Review/</loc>
+        <lastmod>2020-09-23T04:19:57.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://pictureyou-neo.github.io/categories/4-Study/Python/</loc>
-        <lastmod>2020-09-21T06:35:09.801Z</lastmod>
+        <lastmod>2020-09-23T04:15:32.020Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://pictureyou-neo.github.io/categories/4-Study/</loc>
-        <lastmod>2020-09-21T06:35:09.801Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://pictureyou-neo.github.io/categories/3-General/Tool/</loc>
-        <lastmod>2020-09-21T03:25:23.941Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://pictureyou-neo.github.io/categories/3-General/</loc>
-        <lastmod>2020-09-21T03:25:23.941Z</lastmod>
+        <lastmod>2020-09-23T04:15:32.020Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
