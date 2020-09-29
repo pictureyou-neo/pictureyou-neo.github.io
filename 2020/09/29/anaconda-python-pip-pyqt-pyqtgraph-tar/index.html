@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Anaconda / 아나콘다, pip install 안될때, pyqt, pyqtgraph | FTWR | Follow the white rabbit</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="install,python,Anaconda,아나콘다,pip,pyqt,pyqtgraph,.tar,.bz2,offline,보안,proxy,우회">
+    
+    <meta name="description" content="#아나콘다가 요긴할때　Python 의 pip install 이 매우 편하긴 하지만, 사내 네트워크에서 제한하거나 PC 보안프로그램이 막는 경우는 더할나위 없이 답답하다. 아무것도 할 수 없으니 말이다. 다소 번거롭지만 이러한 답답함을 해소할 수 있는 해결방법이 있다.  파이썬 개발환경에 대한 리뷰는 여기로Python &#x2F; 파이썬 개발환경, 파이참, 아나">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anaconda &#x2F; 아나콘다, pip install 안될때, pyqt, pyqtgraph">
+<meta property="og:url" content="http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/index.html">
+<meta property="og:site_name" content="FTWR | Follow the white rabbit">
+<meta property="og:description" content="#아나콘다가 요긴할때　Python 의 pip install 이 매우 편하긴 하지만, 사내 네트워크에서 제한하거나 PC 보안프로그램이 막는 경우는 더할나위 없이 답답하다. 아무것도 할 수 없으니 말이다. 다소 번거롭지만 이러한 답답함을 해소할 수 있는 해결방법이 있다.  파이썬 개발환경에 대한 리뷰는 여기로Python &#x2F; 파이썬 개발환경, 파이참, 아나">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/ana_0.JPG">
+<meta property="article:published_time" content="2020-09-29T04:32:08.000Z">
+<meta property="article:modified_time" content="2020-09-29T05:11:29.904Z">
+<meta property="article:author" content="pictureyou">
+<meta property="article:tag" content="install">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="Anaconda">
+<meta property="article:tag" content="아나콘다">
+<meta property="article:tag" content="pip">
+<meta property="article:tag" content="pyqt">
+<meta property="article:tag" content="pyqtgraph">
+<meta property="article:tag" content=".tar">
+<meta property="article:tag" content=".bz2">
+<meta property="article:tag" content="offline">
+<meta property="article:tag" content="보안">
+<meta property="article:tag" content="proxy">
+<meta property="article:tag" content="우회">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/ana_0.JPG">
+    
+    <link rel="canonical" href="http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/">
+
+    
+
+    
+        <link rel="icon" href="/css/images/fav_nauseatedface.png">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href>
+    
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-178018518-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+    
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FTWR | Follow the white rabbit"> 
+    <meta property="og:description" content="develop log by neo"> 
+    <meta property="og:url" content="http://pictureyou-neo.github.io">
+
+
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/rss2.xml" title="FTWR | Follow the white rabbit" type="application/rss+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="http://pictureyou-neo.github.io">0_Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/1-Retro/">1_Retro</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/">2_Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/2-Web/Hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-Review/">3_Review</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/3-Review/Tool/">Tool</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/">4_Study</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/4-Study/Python/">Python</a></li></ul></li></ul>
+                                
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://about.me/neojung">9_About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/3-Review/">3_Review</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/3-Review/Tool/">Tool</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-anaconda-python-pip-pyqt-pyqtgraph-tar" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Anaconda / 아나콘다, pip install 안될때, pyqt, pyqtgraph
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/" class="article-date">
+       <time datetime="2020-09-29T04:32:08.000Z" itemprop="datePublished">2020/09/29</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/" class="article-date">
+     <time datetime="2020-09-29T05:11:29.904Z" itemprop="dateModified">2020/09/29</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/bz2/" rel="tag">.bz2</a>, <a class="tag-link-link" href="/tags/tar/" rel="tag">.tar</a>, <a class="tag-link-link" href="/tags/Anaconda/" rel="tag">Anaconda</a>, <a class="tag-link-link" href="/tags/install/" rel="tag">install</a>, <a class="tag-link-link" href="/tags/offline/" rel="tag">offline</a>, <a class="tag-link-link" href="/tags/pip/" rel="tag">pip</a>, <a class="tag-link-link" href="/tags/proxy/" rel="tag">proxy</a>, <a class="tag-link-link" href="/tags/pyqt/" rel="tag">pyqt</a>, <a class="tag-link-link" href="/tags/pyqtgraph/" rel="tag">pyqtgraph</a>, <a class="tag-link-link" href="/tags/python/" rel="tag">python</a>, <a class="tag-link-link" href="/tags/%EB%B3%B4%EC%95%88/" rel="tag">보안</a>, <a class="tag-link-link" href="/tags/%EC%95%84%EB%82%98%EC%BD%98%EB%8B%A4/" rel="tag">아나콘다</a>, <a class="tag-link-link" href="/tags/%EC%9A%B0%ED%9A%8C/" rel="tag">우회</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <!--============================================================-->
+<!--                         [서론]                             -->
+<!--============================================================-->
+<h1 id="아나콘다가-요긴할때"><a href="#아나콘다가-요긴할때" class="headerlink" title="#아나콘다가 요긴할때"></a>#아나콘다가 요긴할때</h1><p>　Python 의 pip install 이 매우 편하긴 하지만, 사내 네트워크에서 제한하거나 PC 보안프로그램이 막는 경우는 더할나위 없이 답답하다. 아무것도 할 수 없으니 말이다. 다소 번거롭지만 이러한 답답함을 해소할 수 있는 해결방법이 있다.</p>
+<blockquote>
+<p><strong>파이썬 개발환경에 대한 리뷰는 여기로</strong><br><a href>Python / 파이썬 개발환경, 파이참, 아나콘다, 주피터 노트북</a></p>
+</blockquote>
+<!--[소주제구분]==================================-->
+<h6 id><a href="#" class="headerlink" title="　"></a>　</h6><h6 id="-1"><a href="#-1" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<div style="padding:10px; background-color:#464a4f">
+<div style="padding-left:30px;">
+
+<h2 id="목차"><a href="#목차" class="headerlink" title="[목차]"></a>[목차]</h2><ul>
+<li><a href="#list1">처음부터보기 : Offline 설치가 답이다</a></li>
+<li><a href="#list2">1. Anaconda 홈페이지에서 해당 package 의 “.tar.bz2” 파일을 다운</a></li>
+<li><a href="#list3">2. Anaconda prompt 실행 후 offline install 명령</a></li>
+<li><a href="#list4">3. Anaconda navigator 로 base 에 포함 되었는지 확인</a></li>
+<li><a href="#list5">4. Pycharm 의 interpreter 설정에서도 확인</a></li>
+<li><a href="#list6">5. 테스트 코드 동작시, pyqtgraph 정상동작 확인</a></li>
+</ul>
+</div>
+</div>
+
+<!--[소주제구분]==================================-->
+<h6 id="-2"><a href="#-2" class="headerlink" title="　"></a>　</h6><h6 id="-3"><a href="#-3" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--========================[구분선]============================-->
+<h6 id="-4"><a href="#-4" class="headerlink" title></a></h6><hr>
+<h6 id="-5"><a href="#-5" class="headerlink" title></a></h6><!--========================[구분선]============================-->
+<!--[소주제구분]==================================-->
+<h6 id="-6"><a href="#-6" class="headerlink" title="　"></a>　</h6><h6 id="-7"><a href="#-7" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--============================================================-->
+<!--                         [본론]                             -->
+<!--============================================================-->
+
+<!--[주제]-->
+<p><a name="list1"></a></p>
+<h2 id="Offline-설치가-답이다"><a href="#Offline-설치가-답이다" class="headerlink" title="#Offline 설치가 답이다"></a><strong>#Offline 설치가 답이다</strong></h2><p>　처음에는 pyqt5 패키지 사용을 위해 아나콘다를 접하게 되었다. pip install 없이도 아나콘다만 다운받아서 설치하면 함께 설치되는 Global package 안에 포함되어 있어, interpreter 설정을 아나콘다로 해주어 해결이 가능했다.<br>　하지만, Global package 에 존재하지 않는 pyqtgraph 를 사용하려니 도저히 방법을 찾을 수가 없었고 결국 구글링해서 찾아낸 offline 설치로 해결할 수 있었다. 방법은 아래와 같다.</p>
+<!--[소주제구분]==================================-->
+<h6 id="-8"><a href="#-8" class="headerlink" title="　"></a>　</h6><h6 id="-9"><a href="#-9" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-10"><a href="#-10" class="headerlink" title="　"></a>　</h6><h6 id="-11"><a href="#-11" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<p><a name="list2"></a></p>
+<!--[소주제]-->
+<p><strong><em>1. Anaconda 홈페이지에서 해당 package 의 <strong>“.tar.bz2”</strong> 파일을 다운</em></strong><br>　pyqtgraph 를 예를들면 이렇게 하면 된다. 우선 아래 결로에 들어가서 OS 환경과 Python 버전이 맞는 파일을 다운받으면 된다. </p>
+<p><img src="ana_0.JPG" alt="종류가 굉장히 많다"></p>
+<blockquote>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://anaconda.org/anaconda/pyqtgraph/files">여기서 다운받을 수 있다.</a><br>다운받은 파일을 아래 경로에 넣어주면 된다.<br>C:\Users\user_name\AppData\Local\Continuum\anaconda3\Scripts</p>
+</blockquote>
+<!--[소주제구분]==================================-->
+<h6 id="-12"><a href="#-12" class="headerlink" title="　"></a>　</h6><h6 id="-13"><a href="#-13" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-14"><a href="#-14" class="headerlink" title="　"></a>　</h6><h6 id="-15"><a href="#-15" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<p><a name="list3"></a></p>
+<!--[소주제]-->
+<p><strong><em>2. Anaconda prompt 실행 후 offline install 명령</em></strong><br>　명령은 다음과 같다.</p>
+<!--[코드]-->
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">$ Conda install package_name.tar.bz2 --offline</span></span><br><span class="line"><span class="string">&quot;</span><span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="ana_1.JPG" alt="뭔가 진행되는게 보인다"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-16"><a href="#-16" class="headerlink" title="　"></a>　</h6><h6 id="-17"><a href="#-17" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-18"><a href="#-18" class="headerlink" title="　"></a>　</h6><h6 id="-19"><a href="#-19" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<p><a name="list4"></a></p>
+<!--[소주제]-->
+<p><strong><em>3. Anaconda navigator 로 base 에 포함 되었는지 확인</em></strong><br>　Anaconda 를 설치하면 시작메뉴에 추가되는 툴이 하나 있는데, 이 Anaconda navigator 를 통해서 설치된 패키지 확인이 가능하다.</p>
+<p><img src="ana_2.JPG" alt="Search 에서 원하는 패키지명을 넣어보자"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-20"><a href="#-20" class="headerlink" title="　"></a>　</h6><h6 id="-21"><a href="#-21" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-22"><a href="#-22" class="headerlink" title="　"></a>　</h6><h6 id="-23"><a href="#-23" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<p><a name="list5"></a></p>
+<!--[소주제]-->
+<p><strong><em>4. Pycharm 의 interpreter 설정에서도 확인</em></strong><br>　Pycharm 을 사용하는 경우 File\Settings\Project interpreter 에서 패키지가 포함되었는지 확인이 가능하다.</p>
+<p><img src="ana_3.JPG" alt="Pycharm 에서 이렇게 확인 가능"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-24"><a href="#-24" class="headerlink" title="　"></a>　</h6><h6 id="-25"><a href="#-25" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+<!--[소주제구분]==================================-->
+<h6 id="-26"><a href="#-26" class="headerlink" title="　"></a>　</h6><h6 id="-27"><a href="#-27" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+
+<p><a name="list6"></a></p>
+<!--[소주제]-->
+<p><strong><em>5. 테스트 코드 동작시, pyqtgraph 정상동작 확인</em></strong><br>　테스트 코드는 다음과 같다.</p>
+<!--[코드]-->
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> Qt</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QHBoxLayout, QLabel, QSizePolicy, QSlider, QSpacerItem, QVBoxLayout, QWidget</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pyqtgraph <span class="keyword">as</span> pg</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Slider</span>(<span class="params">QWidget</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, minimum, maximum, parent=None</span>):</span></span><br><span class="line">        super(Slider, self).__init__(parent=parent)</span><br><span class="line">        self.verticalLayout = QVBoxLayout(self)</span><br><span class="line">        self.label = QLabel(self)</span><br><span class="line">        self.verticalLayout.addWidget(self.label)</span><br><span class="line">        self.horizontalLayout = QHBoxLayout()</span><br><span class="line">        spacerItem = QSpacerItem(<span class="number">0</span>, <span class="number">20</span>, QSizePolicy.Expanding, QSizePolicy.Minimum)</span><br><span class="line">        self.horizontalLayout.addItem(spacerItem)</span><br><span class="line">        self.slider = QSlider(self)</span><br><span class="line">        self.slider.setOrientation(Qt.Vertical)</span><br><span class="line">        self.horizontalLayout.addWidget(self.slider)</span><br><span class="line">        spacerItem1 = QSpacerItem(<span class="number">0</span>, <span class="number">20</span>, QSizePolicy.Expanding, QSizePolicy.Minimum)</span><br><span class="line">        self.horizontalLayout.addItem(spacerItem1)</span><br><span class="line">        self.verticalLayout.addLayout(self.horizontalLayout)</span><br><span class="line">        self.resize(self.sizeHint())</span><br><span class="line">        self.minimum = minimum</span><br><span class="line">        self.maximum = maximum</span><br><span class="line">        self.slider.valueChanged.connect(self.setLabelValue)</span><br><span class="line">        self.x = <span class="literal">None</span></span><br><span class="line">        self.setLabelValue(self.slider.value())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setLabelValue</span>(<span class="params">self, value</span>):</span></span><br><span class="line">        self.x = self.minimum + (float(value) / (self.slider.maximum() - self.slider.minimum())) * (</span><br><span class="line">        self.maximum - self.minimum)</span><br><span class="line">        self.label.setText(<span class="string">&quot;&#123;0:.4g&#125;&quot;</span>.format(self.x))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Widget</span>(<span class="params">QWidget</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, parent=None</span>):</span></span><br><span class="line">        super(Widget, self).__init__(parent=parent)</span><br><span class="line">        self.horizontalLayout = QHBoxLayout(self)</span><br><span class="line">        self.w1 = Slider(<span class="number">-10</span>, <span class="number">10</span>)</span><br><span class="line">        self.horizontalLayout.addWidget(self.w1)</span><br><span class="line">        self.w2 = Slider(<span class="number">-1</span>, <span class="number">1</span>)</span><br><span class="line">        self.horizontalLayout.addWidget(self.w2)</span><br><span class="line">        self.w3 = Slider(<span class="number">-10</span>, <span class="number">10</span>)</span><br><span class="line">        self.horizontalLayout.addWidget(self.w3)</span><br><span class="line">        self.w4 = Slider(<span class="number">-10</span>, <span class="number">10</span>)</span><br><span class="line">        self.horizontalLayout.addWidget(self.w4)</span><br><span class="line">        self.win = pg.GraphicsWindow(title=<span class="string">&quot;Basic plotting examples&quot;</span>)</span><br><span class="line">        self.horizontalLayout.addWidget(self.win)</span><br><span class="line">        self.p6 = self.win.addPlot(title=<span class="string">&quot;My Plot&quot;</span>)</span><br><span class="line">        self.curve = self.p6.plot(pen=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">        self.update_plot()</span><br><span class="line">        self.w1.slider.valueChanged.connect(self.update_plot)</span><br><span class="line">        self.w2.slider.valueChanged.connect(self.update_plot)</span><br><span class="line">        self.w3.slider.valueChanged.connect(self.update_plot)</span><br><span class="line">        self.w4.slider.valueChanged.connect(self.update_plot)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update_plot</span>(<span class="params">self</span>):</span></span><br><span class="line">        a = self.w1.x</span><br><span class="line">        b = self.w2.x</span><br><span class="line">        c = self.w3.x</span><br><span class="line">        d = self.w4.x</span><br><span class="line">        x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">100</span>)</span><br><span class="line">        data = a + np.cos(x + c * np.pi / <span class="number">180</span>) * np.exp(-b * x) * d</span><br><span class="line">        self.curve.setData(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    w = Widget()</span><br><span class="line">    w.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+
+<p><img src="ana_4.JPG" alt="이 그래프가 떠야 한다"></p>
+<!--[소주제구분]==================================-->
+<h6 id="-28"><a href="#-28" class="headerlink" title="　"></a>　</h6><h6 id="-29"><a href="#-29" class="headerlink" title="　"></a>　</h6><!--[소주제구분]==================================-->
+
+<!--========================[구분선]============================-->
+<h6 id="-30"><a href="#-30" class="headerlink" title></a></h6><hr>
+<h6 id="-31"><a href="#-31" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [결론]                             -->
+<!--============================================================-->
+<h1 id="있을수도-있고-없을수도-있습니다"><a href="#있을수도-있고-없을수도-있습니다" class="headerlink" title="#있을수도 있고, 없을수도 있습니다"></a>#있을수도 있고, 없을수도 있습니다</h1><p>　어떤 패키지는 .tar.bz2 형식이 지원되지 않거나, 업로드 되어 있지 않은 경우들도 있다. 구글링 했을 때 기억으로 변환해서 하는방법도 있었던것 같지만 이 방법이 가장 확실하게 잘 되는 방법이므로 오늘은 여기까지.</p>
+<!--========================[구분선]============================-->
+<h6 id="-32"><a href="#-32" class="headerlink" title></a></h6><hr>
+<h6 id="-33"><a href="#-33" class="headerlink" title></a></h6><!--============================================================-->
+<!--                         [참조]                             -->
+<!--============================================================-->
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="#Reference"></a>#Reference</h1><ul>
+<li><a href="google.com">킹황갓 구글</a></li>
+</ul>
+<!--============================================================-->
+<!--                         [로고]                             -->
+<!--============================================================-->
+<h6 id="-34"><a href="#-34" class="headerlink" title="　"></a>　</h6><h6 id="-35"><a href="#-35" class="headerlink" title="　"></a>　</h6><p><img src="/images/rabbit-100.png"></p>
+<h6 id="-36"><a href="#-36" class="headerlink" title="　"></a>　</h6>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/" data-id="ckfnkzor800386cvf8fwl8obb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "pictureyou"
+        },
+        "headline": "Anaconda / 아나콘다, pip install 안될때, pyqt, pyqtgraph",
+        "image": "http://pictureyou-neo.github.ioana_0.JPG",
+        "keywords": "install python Anaconda 아나콘다 pip pyqt pyqtgraph .tar .bz2 offline 보안 proxy 우회",
+        "genre": "3_Review Tool",
+        "datePublished": "2020-09-29",
+        "dateCreated": "2020-09-29",
+        "dateModified": "2020-09-29",
+        "url": "http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/",
+        "description": "
+
+
+#아나콘다가 요긴할때　Python 의 pip install 이 매우 편하긴 하지만, 사내 네트워크에서 제한하거나 PC 보안프로그램이 막는 경우는 더할나위 없이 답답하다. 아무것도 할 수 없으니 말이다. 다소 번거롭지만 이러한 답답함을 해소할 수 있는 해결방법이 있다.
+
+파이썬 개발환경에 대한 리뷰는 여기로Python / 파이썬 개발환경, 파이참, 아나",
+        "wordCount": 1509
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/pictureyou-neo" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/09/29/python-develop-ide-anaconda-jupyter/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Python / 파이썬 개발환경, 파이참, 아나콘다, 주피터 노트북</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-Review/">3_Review</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-Review/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/" class="title">Anaconda / 아나콘다, pip install 안될때, pyqt, pyqtgraph</a></p>
+                            <p class="item-date"><time datetime="2020-09-29T04:32:08.000Z" itemprop="datePublished">2020/09/29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/3-Review/">3_Review</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/3-Review/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2020/09/29/python-develop-ide-anaconda-jupyter/" class="title">Python / 파이썬 개발환경, 파이참, 아나콘다, 주피터 노트북</a></p>
+                            <p class="item-date"><time datetime="2020-09-29T01:42:45.000Z" itemprop="datePublished">2020/09/29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/22/hexo-troubleshooting-fix-error-howto/" class="title">Hexo / trouble shooting 총집합, 에러, 해결방법, 색변경, 사이드바</a></p>
+                            <p class="item-date"><time datetime="2020-09-22T03:35:25.000Z" itemprop="datePublished">2020/09/22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/4-Study/">4_Study</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/4-Study/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2020/09/21/python-basic-calculation-logic-random/" class="title">Python basic / 파이썬 연산자, 숫자처리함수, 랜덤</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T06:32:48.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/2-Web/">2_Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/2-Web/Hexo/">Hexo</a></p>
+                            <p class="item-title"><a href="/2020/09/21/hexo-markdown-troubleshooting-fix-change/" class="title">Hexo / 마크다운, 줄바꿈, 들여쓰기, 프리뷰, scaffold</a></p>
+                            <p class="item-date"><time datetime="2020-09-21T03:09:32.000Z" itemprop="datePublished">2020/09/21</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/bz2/" style="font-size: 10px;">.bz2</a> <a href="/tags/less/" style="font-size: 10px;">.less</a> <a href="/tags/md/" style="font-size: 16.67px;">.md</a> <a href="/tags/tar/" style="font-size: 10px;">.tar</a> <a href="/tags/Anaconda/" style="font-size: 13.33px;">Anaconda</a> <a href="/tags/FTWR/" style="font-size: 10px;">FTWR</a> <a href="/tags/FontAwesome/" style="font-size: 10px;">FontAwesome</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Github/" style="font-size: 13.33px;">Github</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Jupyternotebook/" style="font-size: 10px;">Jupyternotebook</a> <a href="/tags/MS/" style="font-size: 10px;">MS</a> <a href="/tags/PPOffice/" style="font-size: 16.67px;">PPOffice</a> <a href="/tags/Preview/" style="font-size: 10px;">Preview</a> <a href="/tags/Pycharm/" style="font-size: 10px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/VSC/" style="font-size: 16.67px;">VSC</a> <a href="/tags/abs/" style="font-size: 10px;">abs</a> <a href="/tags/basic/" style="font-size: 13.33px;">basic</a> <a href="/tags/calculation/" style="font-size: 10px;">calculation</a> <a href="/tags/character/" style="font-size: 10px;">character</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/comment/" style="font-size: 10px;">comment</a> <a href="/tags/escape/" style="font-size: 10px;">escape</a> <a href="/tags/extension/" style="font-size: 10px;">extension</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hueman/" style="font-size: 16.67px;">hueman</a> <a href="/tags/index/" style="font-size: 10px;">index.</a> <a href="/tags/inline/" style="font-size: 10px;">inline</a> <a href="/tags/install/" style="font-size: 16.67px;">install</a> <a href="/tags/intranet/" style="font-size: 10px;">intranet</a> <a href="/tags/markdown/" style="font-size: 16.67px;">markdown</a> <a href="/tags/matrix/" style="font-size: 10px;">matrix</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/neo/" style="font-size: 10px;">neo</a> <a href="/tags/newline/" style="font-size: 10px;">newline</a> <a href="/tags/offline/" style="font-size: 10px;">offline</a> <a href="/tags/pip/" style="font-size: 13.33px;">pip</a> <a href="/tags/print/" style="font-size: 10px;">print</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/py/" style="font-size: 13.33px;">py</a> <a href="/tags/pyqt/" style="font-size: 10px;">pyqt</a> <a href="/tags/pyqtgraph/" style="font-size: 10px;">pyqtgraph</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/randint/" style="font-size: 10px;">randint</a> <a href="/tags/random/" style="font-size: 10px;">random</a> <a href="/tags/scaffold/" style="font-size: 10px;">scaffold</a> <a href="/tags/sidebar/" style="font-size: 10px;">sidebar</a> <a href="/tags/template/" style="font-size: 10px;">template</a> <a href="/tags/textedif/" style="font-size: 10px;">textedif</a> <a href="/tags/theme/" style="font-size: 16.67px;">theme</a> <a href="/tags/troubleshooting/" style="font-size: 10px;">troubleshooting</a> <a href="/tags/visualstudiocode/" style="font-size: 10px;">visualstudiocode</a> <a href="/tags/%EA%B8%B0%EC%B4%88/" style="font-size: 13.33px;">기초</a> <a href="/tags/%EB%82%98%EB%A8%B8%EC%A7%80/" style="font-size: 10px;">나머지</a> <a href="/tags/%EB%85%BC%EB%A6%AC%EC%97%B0%EC%82%B0/" style="font-size: 10px;">논리연산</a> <a href="/tags/%EB%93%A4%EC%97%AC%EC%93%B0%EA%B8%B0/" style="font-size: 10px;">들여쓰기</a> <a href="/tags/%EB%9E%9C%EB%8D%A4/" style="font-size: 10px;">랜덤</a> <a href="/tags/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/" style="font-size: 10px;">마크다운</a> <a href="/tags/%EB%AA%AB/" style="font-size: 10px;">몫</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4/" style="font-size: 10px;">문자열</a> <a href="/tags/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%A0%9C%EC%96%B4/" style="font-size: 10px;">문자열제어</a> <a href="/tags/%EB%B3%B4%EC%95%88/" style="font-size: 10px;">보안</a> <a href="/tags/%EB%B9%84%EC%A5%AC%EC%96%BC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%EC%BD%94%EB%93%9C/" style="font-size: 10px;">비쥬얼스튜디오코드</a> <a href="/tags/%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94/" style="font-size: 10px;">사이드바</a> <a href="/tags/%EC%83%89%EA%B9%94%EB%B3%80%EA%B2%BD/" style="font-size: 10px;">색깔변경</a> <a href="/tags/%EC%83%89%EB%B3%80%EA%B2%BD/" style="font-size: 10px;">색변경</a> <a href="/tags/%EC%88%AB%EC%9E%90%EC%B2%98%EB%A6%AC%ED%95%A8%EC%88%98/" style="font-size: 10px;">숫자처리함수</a> <a href="/tags/%EC%95%84%EB%82%98%EC%BD%98%EB%8B%A4/" style="font-size: 13.33px;">아나콘다</a> <a href="/tags/%EC%97%90%EB%9F%AC/" style="font-size: 10px;">에러</a> <a href="/tags/%EC%97%B0%EC%82%B0%EC%9E%90/" style="font-size: 10px;">연산자</a> <a href="/tags/%EC%9A%B0%ED%9A%8C/" style="font-size: 10px;">우회</a> <a href="/tags/%EC%A0%88%EB%8C%80%EA%B0%92/" style="font-size: 10px;">절대값</a> <a href="/tags/%EC%A3%BC%EC%84%9D/" style="font-size: 10px;">주석</a> <a href="/tags/%EC%A3%BC%ED%94%BC%ED%84%B0/" style="font-size: 10px;">주피터</a> <a href="/tags/%EC%A3%BC%ED%94%BC%ED%84%B0%EB%85%B8%ED%8A%B8%EB%B6%81/" style="font-size: 10px;">주피터노트북</a> <a href="/tags/%EC%A4%84%EB%B0%94%EA%BF%88/" style="font-size: 10px;">줄바꿈</a> <a href="/tags/%EC%B6%94%EC%B2%9C/" style="font-size: 10px;">추천</a> <a href="/tags/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC/" style="font-size: 10px;">카테고리</a> <a href="/tags/%EC%BD%94%EB%93%9C/" style="font-size: 10px;">코드</a> <a href="/tags/%ED%83%88%EC%B6%9C%EB%AC%B8%EC%9E%90/" style="font-size: 10px;">탈출문자</a> <a href="/tags/%ED%85%8C%EB%A7%88/" style="font-size: 10px;">테마</a> <a href="/tags/%ED%86%B5%ED%95%A9%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/" style="font-size: 10px;">통합개발환경</a> <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" style="font-size: 16.67px;">파이썬</a> <a href="/tags/%ED%8C%8C%EC%9D%B4%EC%B0%B8/" style="font-size: 10px;">파이참</a> <a href="/tags/%ED%95%B4%EA%B2%B0/" style="font-size: 10px;">해결</a> <a href="/tags/%ED%97%A5%EC%86%8C/" style="font-size: 20px;">헥소</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 pictureyou</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank" rel="external nofollow noopener noreferrer">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'https-pictureyou-neo-github-io';
+    
+    
+    var disqus_url = 'http://pictureyou-neo.github.io/2020/09/29/anaconda-python-pip-pyqt-pyqtgraph-tar/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
